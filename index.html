@@ -1,0 +1,3437 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-font="normal">
+<head>
+<meta charset="utf-8">
+<title>DeepSeek</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#F9F9F9">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="DeepSeek">
+<meta name="description" content="DeepSeek · 本机 API 版对话客户端">
+<link rel="icon" href="data:image/png;base64,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">
+<style>/* ============ tokens ============ */
+:root{
+  --blue:#597AEB;
+  --blue-soft:#EFF3FE;
+  --bg:#FFFFFF;
+  --sheet-bg:#F4F4F6;
+  --surface:#FFFFFF;
+  --surface-2:#F4F4F5;
+  --text:#0F0F0F;
+  --text-2:#6E6E6E;
+  --text-3:#9B9B9B;
+  --line:#EDEDED;
+  --line-strong:#E2E2E4;
+  --chip:#F4F4F5;
+  --danger:#E5484D;
+  --shadow-card:0 6px 24px rgba(17,17,26,.05), 0 1px 2px rgba(17,17,26,.04);
+  --glass-bg:rgba(255,255,255,.72);
+  --glass-line:rgba(255,255,255,.65);
+  --radius-sheet:26px;
+  --fs:17px;
+  --fs-scale:1;
+}
+[data-theme="dark"]{
+  --blue:#7F97F5;
+  --blue-soft:rgba(89,122,235,.18);
+  --bg:#0C0C0E;
+  --sheet-bg:#0A0A0B;
+  --surface:#1C1C1E;
+  --surface-2:#202127;
+  --text:#F2F3F5;
+  --text-2:#A2A4AA;
+  --text-3:#75777E;
+  --line:#26272C;
+  --line-strong:#32343A;
+  --chip:#202127;
+  --danger:#FF6369;
+  --shadow-card:0 8px 30px rgba(0,0,0,.5);
+  --glass-bg:rgba(23,24,27,.7);
+  --glass-line:rgba(255,255,255,.08);
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{
+  -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;
+  -webkit-touch-callout:none;
+}
+input,textarea,select,[contenteditable="true"]{
+  -webkit-user-select:text !important;-moz-user-select:text !important;
+  -ms-user-select:text !important;user-select:text !important;
+  -webkit-touch-callout:default !important;
+}
+img,a{-webkit-user-drag:none}
+html,body{overscroll-behavior:none;overscroll-behavior-x:none}
+/* keep horizontal gestures inside the app (browser back-swipe / pull-to-refresh) */
+#app,.chat-scroll,.sidebar,.sheet-body,.sb-list,.topbar{touch-action:pan-y}
+/* areas that must still pan horizontally */
+.answer pre,.recent-strip,.share-preview{touch-action:auto}
+html,body{margin:0;padding:0;height:100%}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","HarmonyOS Sans SC","MiSans","Noto Sans SC","Microsoft YaHei",system-ui,sans-serif;
+  background:#E9E9EC;color:var(--text);
+  overscroll-behavior:none;
+  font-size:var(--fs);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+button{font-family:inherit;color:inherit;background:none;border:none;padding:0;margin:0;cursor:pointer}
+input,textarea{font-family:inherit}
+img{display:block}
+[hidden]{display:none !important}
+
+/* ============ shell ============ */
+#app{
+  position:relative;width:100%;max-width:480px;height:100dvh;
+  margin:0 auto;background:var(--bg);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:background .25s ease;
+}
+@media (min-width:520px){
+  body{background:#E9E9EC}
+  #app{box-shadow:0 0 0 1px rgba(0,0,0,.05),0 20px 60px rgba(0,0,0,.12)}
+}
+
+/* ============ topbar ============ */
+.topbar{
+  position:absolute;left:0;right:0;top:0;z-index:30;
+  display:flex;align-items:center;gap:12px;
+  padding:calc(env(safe-area-inset-top,0px) + 8px) 14px 10px;
+  pointer-events:none;
+}
+.topbar::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:150%;
+  background:linear-gradient(to bottom,var(--bg) 42%,color-mix(in srgb,var(--bg) 70%,transparent) 74%,transparent);
+  pointer-events:none;z-index:-1;
+}
+.topbar > *{pointer-events:auto}
+.topbar-title{
+  flex:1;min-width:0;font-size:17px;font-weight:600;letter-spacing:.1px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  opacity:0;transform:translateY(2px);transition:opacity .2s ease,transform .2s ease;
+}
+.topbar-title.show{opacity:1;transform:none}
+.topbar-right{
+  display:flex;align-items:center;gap:2px;
+  height:44px;padding:0 4px;border-radius:22px;
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  backdrop-filter:blur(18px) saturate(180%);
+  border:.5px solid var(--glass-line);
+  box-shadow:0 2px 10px rgba(17,17,26,.06),inset 0 1px 0 rgba(255,255,255,.55);
+}
+.icon-btn{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--text);transition:background .15s,transform .15s;
+}
+.icon-btn:active{transform:scale(.92)}
+.icon-btn svg{width:24px;height:24px}
+.icon-btn.glass{
+  width:44px;height:44px;background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(18px) saturate(180%);
+  backdrop-filter:blur(18px) saturate(180%);
+  border:.5px solid var(--glass-line);
+  box-shadow:0 2px 10px rgba(17,17,26,.06),inset 0 1px 0 rgba(255,255,255,.55);
+}
+.icon-btn.plain svg{width:27px;height:27px}
+.icon-btn.ghost:hover{background:var(--surface-2)}
+
+/* ============ scroll area ============ */
+.chat-scroll{
+  flex:1;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+  padding:calc(env(safe-area-inset-top,0px) + 66px) 20px 210px;
+  scrollbar-width:none;
+}
+.chat-scroll::-webkit-scrollbar{display:none}
+
+/* ============ empty state ============ */
+.empty{
+  position:absolute;left:0;right:0;top:0;bottom:0;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:22px;padding-bottom:36px;pointer-events:none;
+}
+.empty .whale{width:45px;height:auto;opacity:.98}
+[data-theme="dark"] .empty .whale{filter:brightness(1.12) saturate(1.05)}
+.empty-title{font-size:20px;font-weight:600;letter-spacing:.2px;margin:0;color:var(--text)}
+
+/* ============ messages ============ */
+.messages{display:flex;flex-direction:column}
+.msg{display:flex;flex-direction:column}
+.msg.user{align-items:flex-end;margin:18px 0 12px}
+.bubble{
+  max-width:84%;background:var(--blue-soft);color:var(--text);
+  padding:10px 14px;border-radius:18px;font-size:17px;line-height:1.5;
+  white-space:pre-wrap;word-break:break-word;
+}
+.bubble:active{opacity:.9}
+.bubble-body{display:flex;flex-direction:column;gap:8px}
+.bubble-attach{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.attach-thumb{width:120px;height:120px;border-radius:12px;object-fit:cover;background:var(--surface-2)}
+.attach-file{
+  display:flex;align-items:center;gap:8px;max-width:230px;
+  background:rgba(255,255,255,.7);border-radius:10px;padding:8px 10px;font-size:13px;
+}
+[data-theme="dark"] .attach-file{background:rgba(255,255,255,.08)}
+.attach-file .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.msg.ai{margin:2px 0 28px;font-size:17px;line-height:1.75;color:var(--text)}
+.msg.ai .answer{word-break:break-word}
+
+/* thinking */
+.think{margin:2px 0 4px}
+.think-head{
+  display:inline-flex;align-items:center;gap:5px;
+  color:var(--text-3);font-size:15px;line-height:1.4;padding:5px 0;
+  transition:color .15s;
+}
+.think-head:active{color:var(--text-2)}
+.think-head .chev{width:16px;height:16px;transition:transform .22s ease}
+.think.open .think-head .chev{transform:rotate(90deg)}
+.think-body{
+  display:none;margin:6px 0 14px;padding-left:13px;
+  border-left:2px solid var(--line);color:var(--text-2);
+  font-size:15px;line-height:1.78;
+}
+.think.open .think-body{display:block;animation:fadeIn .18s ease}
+.think-p{display:flex;gap:8px;margin:0 0 10px}
+.think-p:last-child{margin-bottom:2px}
+.think-p .dot{flex:0 0 auto;color:var(--text-3);font-size:15px;line-height:1.78}
+.think-p .tx{white-space:pre-wrap;word-break:break-word}
+.thinking-live .think-head{color:var(--blue)}
+.think-dots i{display:inline-block;width:3px;height:3px;border-radius:50%;background:currentColor;margin:0 1.5px;animation:blink 1.1s infinite}
+.think-dots i:nth-child(2){animation-delay:.18s}
+.think-dots i:nth-child(3){animation-delay:.36s}
+
+/* tool rows inside thinking */
+.tool-row{display:flex;align-items:center;gap:7px;margin:9px 0;color:var(--text-2);font-size:14.5px}
+.tool-row .ti{width:17px;height:17px;flex:0 0 auto;color:var(--text-2)}
+.tool-row .favs{display:flex;align-items:center;gap:-4px}
+.tool-row .fav{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--bg);object-fit:cover;margin-left:-5px;background:#fff}
+.tool-row .fav:first-child{margin-left:0}
+
+/* answer markdown */
+.answer p{margin:0 0 12px}
+.answer p:last-child{margin-bottom:0}
+.answer h1,.answer h2,.answer h3,.answer h4{margin:20px 0 10px;font-weight:600;line-height:1.4}
+.answer h1{font-size:21px}
+.answer h2{font-size:19.5px}
+.answer h3{font-size:18px}
+.answer h4{font-size:17px}
+.answer ul,.answer ol{margin:0 0 12px;padding-left:22px}
+.answer li{margin:5px 0}
+.answer strong{font-weight:600}
+.answer em{font-style:italic}
+.answer a{color:var(--blue);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--blue) 35%,transparent)}
+.answer blockquote{
+  margin:12px 0;padding:2px 0 2px 12px;border-left:3px solid var(--line-strong);color:var(--text-2);
+}
+.answer hr{border:none;border-top:1px solid var(--line);margin:18px 0}
+.answer code{
+  font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.9em;
+  background:var(--surface-2);padding:2px 5px;border-radius:5px;
+}
+.answer pre{
+  position:relative;margin:12px 0;background:var(--surface-2);
+  border-radius:12px;padding:14px 14px 12px;overflow:auto;
+}
+.answer pre code{background:none;padding:0;font-size:13.5px;line-height:1.6;white-space:pre}
+.code-head{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:12px;color:var(--text-3);margin:14px 0 -6px;
+}
+.copy-code{font-size:12px;color:var(--text-2);padding:2px 6px;border-radius:6px}
+.copy-code:active{background:var(--surface-2)}
+.answer table{border-collapse:collapse;width:100%;margin:12px 0;font-size:15px;display:block;overflow-x:auto}
+.answer th,.answer td{border:1px solid var(--line);padding:7px 10px;text-align:left}
+.answer th{background:var(--surface-2);font-weight:600}
+.answer .katex{font-size:1.02em}
+
+/* citations */
+.cite{
+  display:inline-block;font-size:9.5px;line-height:1.6;color:#8D93A8;
+  background:#F0F2F8;border-radius:4px;padding:0 3px;margin:0 1px;
+  vertical-align:super;cursor:pointer;
+}
+[data-theme="dark"] .cite{background:rgba(255,255,255,.09);color:#9AA1B8}
+.cite:active{filter:brightness(.95)}
+
+/* sources pill */
+.sources{
+  display:inline-flex;align-items:center;gap:9px;margin:14px 0 4px;
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 6px;
+  font-size:13.5px;color:var(--text-3);background:var(--surface);
+}
+.sources .favs{display:flex}
+.sources .fav{width:18px;height:18px;border-radius:50%;object-fit:cover;margin-left:-5px;border:1.5px solid var(--surface);background:#fff}
+.sources .fav:first-child{margin-left:0}
+.sources .more{font-size:12px;background:var(--surface-2);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;margin-left:-5px}
+
+/* actions */
+.actions{display:flex;align-items:center;gap:22px;margin-top:16px;color:var(--text-3)}
+.actions button{color:var(--text-3);display:flex;align-items:center;justify-content:center;transition:color .15s,transform .12s}
+.actions button:active{transform:scale(.9)}
+.actions svg{width:21px;height:21px}
+.actions .spacer{flex:1}
+.actions .on{color:var(--blue)}
+.actions .bill{
+  font-size:12px;height:22px;padding:0 8px;border-radius:11px;
+  border:1px solid var(--line);color:var(--text-3);gap:3px;
+}
+.answer-note{font-size:12.5px;color:var(--text-3);margin-top:10px;line-height:1.5}
+
+/* streaming caret */
+.caret{display:inline-block;width:7px;height:16px;background:var(--blue);border-radius:2px;vertical-align:-2px;margin-left:2px;animation:blink 1s steps(2) infinite}
+
+/* error */
+.err-box{
+  margin-top:10px;display:flex;flex-direction:column;gap:8px;align-items:flex-start;
+  background:color-mix(in srgb,var(--danger) 8%,transparent);
+  border:1px solid color-mix(in srgb,var(--danger) 22%,transparent);
+  border-radius:12px;padding:10px 12px;font-size:14px;color:var(--danger);line-height:1.5;
+}
+.err-box button{font-size:13px;color:var(--danger);text-decoration:underline}
+.err-acts{display:flex;gap:14px;align-items:center}
+
+/* ============ composer ============ */
+.composer-wrap{
+  position:absolute;left:0;right:0;bottom:0;z-index:40;
+  padding:0 6px calc(env(safe-area-inset-bottom,0px) + 10px);
+  background:linear-gradient(to top,var(--bg) 58%,color-mix(in srgb,var(--bg) 88%,transparent) 82%,transparent);
+}
+.composer{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:26px;padding:13px 16px 10px;
+  box-shadow:var(--shadow-card);
+  transition:border-color .2s,box-shadow .2s;
+}
+.composer.focus{border-color:var(--line-strong)}
+.composer-row{display:flex;align-items:center;gap:8px;margin-top:2px}
+#input{
+  display:block;width:100%;border:none;outline:none;background:transparent;resize:none;
+  font-size:17px;line-height:1.45;color:var(--text);
+  padding:1px 2px 6px;max-height:150px;min-height:50px;overflow-y:auto;
+}
+#input::placeholder{color:var(--text-3)}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 12px;
+  border-radius:17px;background:var(--chip);color:var(--text);
+  font-size:14.5px;font-weight:400;white-space:nowrap;
+  transition:background .18s,color .18s,transform .12s;
+}
+.chip svg{width:22px;height:22px}
+.chip:active{transform:scale(.96)}
+.chip.on{background:var(--blue-soft);color:var(--blue)}
+.composer-actions{margin-left:auto;display:flex;align-items:center;gap:6px}
+.composer-actions .icon-btn{width:34px;height:34px}
+.composer-actions svg{width:26px;height:26px}
+.send-btn{
+  width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .12s,opacity .15s;
+}
+.send-btn:active{transform:scale(.92)}
+.send-btn svg{width:19px;height:19px}
+.send-btn.stop{background:var(--text)}
+.send-btn.stop svg{width:12px;height:12px}
+.send-btn[disabled]{opacity:.35}
+.disclaimer{
+  text-align:center;font-size:11px;color:var(--text-3);padding:6px 0 2px;
+  letter-spacing:.2px;
+}
+.disclaimer.hide{visibility:hidden}
+
+/* attachments in composer */
+.attach-preview{display:flex;gap:8px;flex-wrap:wrap;padding:2px 2px 8px}
+.attach-chip{
+  position:relative;display:flex;align-items:center;gap:7px;height:32px;
+  padding:0 10px;border-radius:9px;background:var(--surface-2);font-size:13px;color:var(--text-2);
+  max-width:210px;
+}
+.attach-chip .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.attach-chip .rm{
+  width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.28);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1;flex:0 0 auto;
+}
+.attach-chip.img{padding:0;background:none;height:56px;width:56px}
+.attach-chip.img img{width:56px;height:56px;border-radius:9px;object-fit:cover}
+.attach-chip.img .rm{position:absolute;top:-5px;right:-5px}
+
+/* ============ animations ============ */
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-2px)}to{opacity:1;transform:none}}
+@keyframes popIn{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:none}}
+
+/* back to bottom */
+.to-bottom{
+  position:absolute;right:14px;bottom:calc(env(safe-area-inset-bottom,0px) + 154px);z-index:38;
+  width:36px;height:36px;border-radius:50%;background:var(--surface);border:1px solid var(--line);
+  box-shadow:0 4px 16px rgba(17,17,26,.10);display:flex;align-items:center;justify-content:center;
+  color:var(--text-2);transition:opacity .18s,transform .18s;
+}
+.to-bottom svg{width:20px;height:20px}
+.to-bottom:active{transform:scale(.92)}
+.answer-note.stopped{color:var(--text-3);font-style:normal}
+.answer-note.stopped::before{content:"·";margin-right:6px;opacity:.6}
+#app.dragging::after{
+  content:"";position:absolute;inset:8px;border:2px dashed var(--blue);border-radius:20px;
+  background:color-mix(in srgb,var(--blue) 6%,transparent);z-index:150;pointer-events:none;
+}
+
+/* favicon fallback */
+.fav-ph{display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2);color:var(--text-3)}
+.fav-ph svg{width:70%;height:70%}
+/* focus ring (keyboard only) */
+button:focus-visible,.row:focus-visible,.sb-item:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:10px}
+/* user message entrance */
+.msg.user{animation:popIn .2s cubic-bezier(.22,1,.36,1)}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+}
+
+/* ============ scrim & sidebar ============ */
+.scrim{
+  position:absolute;inset:0;z-index:50;background:rgba(0,0,0,.16);
+  -webkit-backdrop-filter:blur(1.5px);backdrop-filter:blur(1.5px);
+  animation:fadeIn .2s ease;
+}
+.sidebar{
+  position:absolute;left:0;top:0;bottom:0;z-index:60;
+  width:62%;max-width:300px;
+  background:var(--surface);
+  border-radius:0 26px 26px 0;
+  box-shadow:8px 0 40px rgba(0,0,0,.1);
+  display:flex;flex-direction:column;
+  transform:translateX(-102%);
+  transition:transform .3s cubic-bezier(.22,1,.36,1);
+  padding-top:calc(env(safe-area-inset-top,0px) + 14px);
+}
+.sidebar.open{transform:none}
+.sb-search{
+  margin:0 14px 6px;height:38px;border-radius:19px;background:var(--surface-2);
+  display:flex;align-items:center;gap:8px;padding:0 13px;color:var(--text-3);
+}
+.sb-search svg{width:17px;height:17px;flex:0 0 auto}
+.sb-search input{
+  flex:1;border:none;outline:none;background:none;font-size:15px;color:var(--text);
+}
+.sb-search input::placeholder{color:var(--text-3)}
+.sb-list{flex:1;overflow-y:auto;padding:2px 0 10px;scrollbar-width:none}
+.sb-list::-webkit-scrollbar{display:none}
+.sb-sec{
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:12.5px;color:var(--text-3);padding:14px 24px 6px;letter-spacing:.2px;
+}
+.sb-sec .mg{width:18px;height:18px;color:var(--text-3)}
+.sb-item{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  margin:1px 10px;padding:0 12px;height:46px;border-radius:12px;
+  font-size:15.5px;color:var(--text);cursor:pointer;
+  transition:background .15s;
+}
+.sb-item .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sb-item .dots{width:26px;height:26px;display:flex;align-items:center;justify-content:center;color:var(--text-3);opacity:0}
+.sb-item.active{background:var(--blue-soft);color:var(--blue)}
+.sb-item.active .dots{opacity:1;color:var(--blue)}
+.sb-item:active{background:var(--surface-2)}
+.sb-item.active:active{background:var(--blue-soft)}
+.sb-empty{font-size:13.5px;color:var(--text-3);padding:26px 24px;text-align:center}
+.sb-user{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px calc(env(safe-area-inset-bottom,0px) + 12px);
+  border-top:1px solid var(--line);
+}
+.sb-user .av{width:28px;height:28px;border-radius:50%;object-fit:cover;background:var(--surface-2);flex:0 0 auto}
+.sb-user .nm{font-size:15.5px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sb-user .dots{color:var(--text-3);width:26px;height:26px;display:flex;align-items:center;justify-content:center}
+
+/* ============ generic sheet ============ */
+.sheet-root{position:absolute;inset:0;z-index:80;opacity:0;pointer-events:none;transition:opacity .22s ease}
+.sheet-root.visible{opacity:1;pointer-events:auto}
+.sheet-backdrop{
+  position:absolute;inset:0;background:rgba(0,0,0,.28);
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+  animation:fadeIn .22s ease;
+}
+.sheet{
+  position:absolute;left:0;right:0;bottom:0;max-height:94%;
+  background:var(--sheet-bg);
+  border-radius:var(--radius-sheet) var(--radius-sheet) 0 0;
+  display:flex;flex-direction:column;overflow:hidden;
+  transform:translateY(100%);
+  transition:transform .32s cubic-bezier(.22,1,.36,1);
+  box-shadow:0 -10px 40px rgba(0,0,0,.12);
+}
+.sheet.in{transform:none}
+.sheet.full{top:calc(env(safe-area-inset-top,0px) + 12px);max-height:none}
+.sheet.glass{background:var(--glass-bg);-webkit-backdrop-filter:blur(28px) saturate(180%);backdrop-filter:blur(28px) saturate(180%)}
+.sheet-head{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  height:56px;flex:0 0 auto;padding:0 14px;
+}
+.sheet-head .ttl{font-size:17px;font-weight:600}
+.sheet-head .close{
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;border-radius:50%;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;color:var(--text);
+  box-shadow:0 1px 4px rgba(0,0,0,.07);border:.5px solid var(--line);
+}
+.sheet-head .back{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;border-radius:50%;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;color:var(--text);
+  box-shadow:0 1px 4px rgba(0,0,0,.07);border:.5px solid var(--line);
+}
+.sheet-head svg{width:17px;height:17px}
+.sheet-body{flex:1;overflow-y:auto;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 18px);scrollbar-width:none}
+.sheet-body::-webkit-scrollbar{display:none}
+.sheet-grab{width:36px;height:4px;border-radius:2px;background:var(--line-strong);margin:8px auto 0}
+
+/* settings */
+.group-label{font-size:13px;color:var(--text-3);padding:18px 24px 8px;letter-spacing:.2px}
+.card{background:var(--surface);margin:0 14px;border-radius:16px;overflow:hidden}
+.row{
+  display:flex;align-items:center;gap:12px;min-height:50px;padding:0 16px;
+  font-size:16.5px;color:var(--text);cursor:pointer;position:relative;
+}
+.row + .row::before{
+  content:"";position:absolute;left:16px;right:0;top:0;height:1px;background:var(--line);
+}
+.row .ri{width:22px;height:22px;color:var(--text);flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.row .ri svg{width:21px;height:21px}
+.row .rl{flex:1;min-width:0}
+.row .rv{color:var(--text-3);font-size:15.5px;display:flex;align-items:center;gap:3px}
+.row .rc{width:18px;height:18px;color:#C4C4C8;flex:0 0 auto}
+.row:active{background:var(--surface-2)}
+.row.danger{color:var(--danger)}
+.row.danger .ri{color:var(--danger)}
+.row.center{justify-content:center;color:var(--danger)}
+.row.about-min{min-height:44px;font-size:13px;color:var(--text-3);justify-content:center}
+.switch{
+  width:44px;height:26px;border-radius:13px;background:var(--line-strong);
+  position:relative;transition:background .2s;flex:0 0 auto;
+}
+.switch::after{
+  content:"";position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;
+  background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .2s;
+}
+.switch.on{background:var(--blue)}
+.switch.on::after{transform:translateX(18px)}
+
+/* plus sheet */
+.plus-sheet{background:transparent;box-shadow:none}
+.plus-wrap{padding:0 10px calc(env(safe-area-inset-bottom,0px) + 12px)}
+.recent-strip{display:flex;gap:8px;overflow-x:auto;padding:6px 4px 12px;scrollbar-width:none}
+.recent-strip::-webkit-scrollbar{display:none}
+.recent-thumb{
+  width:74px;height:126px;border-radius:12px;object-fit:cover;flex:0 0 auto;
+  border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 14px rgba(0,0,0,.14);background:#fff;
+}
+.plus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.plus-card{
+  background:var(--surface);border-radius:16px;height:104px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;
+  font-size:16px;color:var(--text);
+  box-shadow:var(--shadow-card);
+  transition:transform .12s;
+}
+.plus-card:active{transform:scale(.97)}
+.plus-card svg{width:27px;height:27px}
+.plus-cancel{
+  margin-top:8px;height:52px;border-radius:16px;background:var(--surface);
+  display:flex;align-items:center;justify-content:center;font-size:16.5px;color:var(--text);
+  box-shadow:var(--shadow-card);
+}
+
+/* voice overlay */
+.voice-overlay{
+  position:absolute;inset:0;z-index:70;display:flex;flex-direction:column;justify-content:flex-end;
+  background:rgba(0,0,0,.04);
+}
+.voice-panel{
+  padding:0 26px calc(env(safe-area-inset-bottom,0px) + 26px);
+  display:flex;flex-direction:column;align-items:center;gap:18px;
+}
+.voice-tip{font-size:15px;color:var(--text-2);letter-spacing:.3px}
+.voice-tip.cancel{color:var(--danger)}
+.wave{
+  display:flex;align-items:center;justify-content:center;gap:3px;height:46px;width:100%;
+}
+.wave i{
+  width:3px;border-radius:2px;background:var(--blue);height:6px;
+  transition:height .08s linear;opacity:.95;
+}
+.voice-btn-row{display:flex;align-items:center;gap:16px;margin-top:4px}
+.voice-hold{
+  width:74px;height:74px;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px color-mix(in srgb,var(--blue) 40%,transparent);
+  transition:transform .15s,background .15s;
+}
+.voice-hold svg{width:30px;height:30px}
+.voice-hold.cancel{background:var(--danger);transform:scale(.92)}
+
+/* sources sheet */
+.src-item{display:flex;gap:11px;padding:12px 18px;align-items:flex-start;cursor:pointer}
+.src-item + .src-item{border-top:1px solid var(--line)}
+.src-item .fav{width:20px;height:20px;border-radius:50%;flex:0 0 auto;margin-top:2px;background:var(--surface-2);object-fit:cover}
+.src-item .st{font-size:15px;line-height:1.45;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.src-item .su{font-size:12.5px;color:var(--text-3);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* billing sheet */
+.bill-card{background:var(--surface);margin:8px 14px;border-radius:16px;padding:18px 16px 8px}
+.bill-top{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:4px}
+.bill-top .l{font-size:14px;color:var(--text-3)}
+.bill-top .r{font-size:26px;font-weight:600;letter-spacing:-.3px}
+.bill-sub{font-size:12px;color:var(--text-3);margin-bottom:14px}
+.bill-sec{font-size:13px;color:var(--text-2);font-weight:600;margin:16px 0 8px}
+.bill-grid{display:grid;grid-template-columns:1fr auto auto;gap:6px 12px;font-size:13.5px;color:var(--text-2)}
+.bill-grid .h{color:var(--text-3);font-size:12.5px}
+.bill-grid .num{text-align:right;font-variant-numeric:tabular-nums;color:var(--text)}
+.bill-bar{height:6px;border-radius:3px;background:var(--surface-2);margin:8px 0 6px;overflow:hidden}
+.bill-bar i{display:block;height:100%;background:var(--blue);border-radius:3px}
+.bill-foot{font-size:12px;color:var(--text-3);padding:10px 16px calc(env(safe-area-inset-bottom,0px) + 6px);line-height:1.6}
+
+/* action sheet */
+.act-sheet{background:transparent;box-shadow:none;padding:0 10px calc(env(safe-area-inset-bottom,0px) + 10px)}
+.act-group{background:var(--surface);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-card)}
+.act-item{
+  height:54px;display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:16.5px;color:var(--text);
+}
+.act-item + .act-item{border-top:1px solid var(--line)}
+.act-item.danger{color:var(--danger)}
+.act-item:active{background:var(--surface-2)}
+.act-cancel{margin-top:8px;background:var(--surface);border-radius:16px;height:54px;display:flex;align-items:center;justify-content:center;font-size:16.5px;box-shadow:var(--shadow-card)}
+
+/* ============ setup / onboarding ============ */
+.setup{
+  position:absolute;inset:0;z-index:120;background:var(--bg);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:0 30px calc(env(safe-area-inset-bottom,0px) + 20px);
+  text-align:center;
+}
+.setup .whale{width:58px;margin-bottom:22px}
+.setup h1{font-size:23px;font-weight:600;margin:0 0 10px;letter-spacing:.2px}
+.setup p{font-size:14.5px;color:var(--text-2);line-height:1.65;margin:0 0 26px;max-width:320px}
+.setup .field{
+  width:100%;max-width:330px;height:50px;border-radius:14px;
+  background:var(--surface);border:1px solid var(--line);
+  display:flex;align-items:center;padding:0 14px;gap:8px;margin-bottom:12px;
+}
+.setup .field input{
+  flex:1;min-width:0;border:none;outline:none;background:none;
+  font-size:15.5px;color:var(--text);
+}
+.setup .field input::placeholder{color:var(--text-3)}
+.setup .field .eye{color:var(--text-3);display:flex}
+.setup .go{
+  width:100%;max-width:330px;height:50px;border-radius:25px;
+  background:var(--text);color:var(--bg);font-size:16.5px;font-weight:500;
+  display:flex;align-items:center;justify-content:center;margin-top:6px;
+  transition:transform .12s,opacity .15s;
+}
+.setup .go:active{transform:scale(.98)}
+.setup .go[disabled]{opacity:.4}
+.setup .hint{font-size:12px;color:var(--text-3);margin-top:16px;line-height:1.6;max-width:320px}
+.setup .hint a{color:var(--blue);text-decoration:none}
+.setup .err{font-size:13px;color:var(--danger);margin-top:10px;min-height:18px}
+
+/* ============ toast ============ */
+.toast{
+  position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 120px);
+  transform:translate(-50%,10px);z-index:200;
+  background:rgba(20,20,22,.9);color:#fff;font-size:13.5px;
+  padding:9px 16px;border-radius:18px;max-width:80%;text-align:center;
+  opacity:0;transition:opacity .2s,transform .2s;pointer-events:none;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* share */
+.share-preview{display:flex;justify-content:center;padding:10px 14px 4px}
+.share-preview canvas{width:100%;max-width:330px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.16)}
+.share-bar{display:flex;gap:10px;padding:10px 14px calc(env(safe-area-inset-bottom,0px) + 12px)}
+.share-bar button{
+  flex:1;height:46px;border-radius:14px;background:var(--surface);
+  font-size:15.5px;color:var(--text);box-shadow:var(--shadow-card);
+}
+.share-bar button.primary{background:var(--blue);color:#fff}
+
+/* font size */
+[data-font="small"]{--fs:15.5px}
+[data-font="large"]{--fs:18px}
+[data-font="xlarge"]{--fs:19.5px}
+[data-font="small"] .answer,[data-font="small"] .msg.ai{font-size:15.5px}
+[data-font="large"] .answer,[data-font="large"] .msg.ai{font-size:18px}
+[data-font="xlarge"] .answer,[data-font="xlarge"] .msg.ai{font-size:19.5px}
+
+/* plus sheet backdrop: blur only */
+#sheetRoot.blurred .sheet-backdrop{background:rgba(248,248,250,.18);-webkit-backdrop-filter:blur(11px) saturate(140%);backdrop-filter:blur(11px) saturate(140%)}
+[data-theme="dark"] #sheetRoot.blurred .sheet-backdrop{background:rgba(0,0,0,.22)}
+
+/* billing rows */
+.bill-line{display:flex;align-items:baseline;gap:8px;padding:5px 0;font-size:13.5px}
+.bill-line .bl{color:var(--text-2);flex:1;min-width:0}
+.bill-line .bn{color:var(--text-3);font-size:12.5px;font-variant-numeric:tabular-nums}
+.bill-line .bu{color:var(--text-3);font-size:12px;min-width:80px;text-align:right}
+.bill-line .ba{color:var(--text);min-width:76px;text-align:right;font-variant-numeric:tabular-nums}
+.bill-total{display:flex;align-items:baseline;gap:8px;border-top:1px solid var(--line);margin-top:10px;padding-top:12px;font-size:14.5px}
+.bill-total .bl{font-weight:600;color:var(--text);flex:1}
+.bill-total .bn{color:var(--text-3);font-size:12.5px}
+.bill-total .ba{font-weight:600;min-width:76px;text-align:right;font-variant-numeric:tabular-nums}</style>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8.5h16M4 15.5h11" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="i-plus-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 8.2v7.6M8.2 12h7.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M14.5 5.5L8 12l6.5 6.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6.5 9.5L12 15l5.5-5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9.5 5.5L16 12l-6.5 6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M11 5.5L6.8 9H4.2v6h2.6L11 18.5V5.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="M15 9.2a4 4 0 010 5.6M17.6 6.8a7.4 7.4 0 010 10.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="i-speaker-off" viewBox="0 0 24 24"><path d="M11 5.5L6.8 9H4.2v6h2.6L11 18.5V5.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="M15.2 10.2l4 4M19.2 10.2l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-think" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="12.2" ry="6.7" transform="rotate(45 12 12)" stroke="currentColor" stroke-width="2.1" fill="none"/><ellipse cx="12" cy="12" rx="12.2" ry="6.7" transform="rotate(-45 12 12)" stroke="currentColor" stroke-width="2.1" fill="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3.6 12h16.8M12 3.4c2.6 2.5 3.9 5.4 3.9 8.6s-1.3 6.1-3.9 8.6c-2.6-2.5-3.9-5.4-3.9-8.6S9.4 5.9 12 3.4z" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><circle cx="9" cy="12" r="1.6" fill="currentColor"/><path d="M12.2 8.6a4.6 4.6 0 010 6.8M15.2 6a8 8 0 010 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5.8M6.3 11.5L12 5.8l5.7 5.7" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.6" y="8.6" width="10.4" height="10.4" rx="2.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M15.4 8.6V6.9a2.3 2.3 0 00-2.3-2.3H6.9A2.3 2.3 0 004.6 6.9v6.2a2.3 2.3 0 002.3 2.3h1.7" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M6.6 20.2V9.3h2.6l3.5-5.7 1.4.8-1.1 4.3h4.9c1.1 0 2 1 1.8 2.1l-1.2 6.5c-.2 1-1 1.7-2 1.7H6.6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M6.6 3.8v10.9h2.6l3.5 5.7 1.4-.8-1.1-4.3h4.9c1.1 0 2-1 1.8-2.1l-1.2-6.5c-.2-1-1-1.7-2-1.7H6.6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M13.4 4.6l6 6-6 6v-3.4c-4.4 0-7.3 1.5-9.6 4.6.6-5.6 3.7-9.2 9.6-9.9V4.6z" stroke="currentColor" stroke-width="1.55" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M19.2 12a7.2 7.2 0 11-2.3-5.3" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round"/><path d="M17.2 3.4v3.9h-3.9" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.4" stroke="currentColor" stroke-width="1.7" fill="none"/><path d="M15.6 15.6L20 20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="12" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4.2 8.6h3l1.4-2.2h6.8l1.4 2.2h3v10.2H4.2V8.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><circle cx="12" cy="13.4" r="3.1" stroke="currentColor" stroke-width="1.6" fill="none"/></symbol>
+  <symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3.6" y="4.6" width="16.8" height="14.8" rx="3" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M6.4 16.4l3.6-3.9 2.6 2.5 2.4-2.6 2.6 4" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.6" cy="8.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M13.4 3.8H7.2A2.2 2.2 0 005 6v12a2.2 2.2 0 002.2 2.2h9.6A2.2 2.2 0 0019 18V9.4l-5.6-5.6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/><path d="M13.2 4v5.4h5.4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" fill="none"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.4" r="3.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M4.8 20c.7-3.7 3.6-5.8 7.2-5.8s6.5 2.1 7.2 5.8" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6.2" rx="6.6" ry="2.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M5.4 6.2v11.6c0 1.4 3 2.6 6.6 2.6s6.6-1.2 6.6-2.6V6.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M5.4 12c0 1.4 3 2.6 6.6 2.6s6.6-1.2 6.6-2.6" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M3.6 12h16.8M12 3.4c2.4 2.5 3.7 5.4 3.7 8.6s-1.3 6.1-3.7 8.6c-2.4-2.5-3.7-5.4-3.7-8.6S9.6 5.9 12 3.4z" stroke="currentColor" stroke-width="1.4" fill="none"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 2.8v2.1M12 19.1v2.1M2.8 12h2.1M19.1 12h2.1M5.5 5.5l1.5 1.5M17 17l1.5 1.5M18.5 5.5L17 7M7 17l-1.5 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-aa" viewBox="0 0 24 24"><path d="M3.2 18.4L8 5.6l4.8 12.8M5 14.4h6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.8 18.4l3.6-9.6 3.6 9.6M15.1 15.4h4.6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.6l1.9 5.3 5.3 1.9-5.3 1.9L12 18l-1.9-5.3L4.8 10.8l5.3-1.9L12 3.6z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M18.4 16.2l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z" stroke="currentColor" stroke-width="1.3" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wave-sq" viewBox="0 0 24 24"><path d="M4 10.5v3M8 7.5v9M12 4.8v14.4M16 8.5v7M20 10.5v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 11v5.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="7.8" r="1.05" fill="currentColor"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M13.6 3.8H6.8A1.8 1.8 0 005 5.6v12.8a1.8 1.8 0 001.8 1.8h10.4a1.8 1.8 0 001.8-1.8V8.4l-5.4-4.6z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8.2 9.4h4M8.2 12.6h7.6M8.2 15.8h5.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M9.6 9.3a2.5 2.5 0 114 2c-.9.6-1.4 1.1-1.4 2.1" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/><circle cx="12.2" cy="16.6" r="1" fill="currentColor"/></symbol>
+  <symbol id="i-magnify" viewBox="0 0 24 24"><circle cx="10.6" cy="10.6" r="6.2" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M15.2 15.2L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.8 12S6.2 6.4 12 6.4 21.2 12 21.2 12 17.8 17.6 12 17.6 2.8 12 2.8 12z" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="2.7" stroke="currentColor" stroke-width="1.5" fill="none"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5.4 12.6l4.3 4.3 9-9.4" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-tune" viewBox="0 0 24 24"><path d="M4 8.5h8M16.5 8.5H20M4 15.5h3.5M12 15.5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="14" cy="8.5" r="2.2" stroke="currentColor" stroke-width="1.6" fill="none"/><circle cx="9.5" cy="15.5" r="2.2" stroke="currentColor" stroke-width="1.6" fill="none"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 3.8h6l-1 5.2 3.4 3.4H6.6L10 9l-1-5.2z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M12 12.4v7.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.8 6.6h14.4M9.4 6.6V4.8h5.2v1.8M6.6 6.6l.9 13h9l.9-13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M15.4 4.6l4 4L8.2 19.8l-4.6.8.8-4.6L15.4 4.6z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v10.4M7.6 10.6L12 15l4.4-4.4" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.8 19.2h14.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 15.6V5.2M7.6 9.2L12 4.8l4.4 4.4" stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.8 19.2h14.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8.2" cy="12" r="3.6" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M11.8 12h8.4M17 12v3.2M19.6 12v2.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<div id="app">
+  <header class="topbar">
+    <button class="icon-btn glass" id="btnSidebar" aria-label="历史对话"><svg><use href="#i-menu"/></svg></button>
+    <div class="topbar-title" id="convTitle"></div>
+    <div class="topbar-right">
+      <button class="icon-btn ghost" id="btnAutoRead" aria-label="自动朗读"><svg><use href="#i-speaker-off" id="autoReadIcon"/></svg></button>
+      <button class="icon-btn ghost" id="btnNewChat" aria-label="新对话"><svg><use href="#i-plus-c"/></svg></button>
+    </div>
+  </header>
+
+  <main class="chat-scroll" id="scroll">
+    <div class="empty" id="empty">
+      <img class="whale" id="emptyWhale" alt="" src="">
+      <h1 class="empty-title">你好，我能帮什么忙吗？</h1>
+    </div>
+    <div class="messages" id="messages"></div>
+  </main>
+
+  <div class="composer-wrap" id="composerWrap">
+    <div class="composer" id="composer">
+      <div class="attach-preview" id="attachPreview" hidden></div>
+      <textarea id="input" rows="1" placeholder="发消息或按住说话" enterkeyhint="send"></textarea>
+      <div class="composer-row">
+        <button class="chip" id="chipThink"><svg><use href="#i-think"/></svg>深度思考</button>
+        <button class="chip" id="chipSearch"><svg><use href="#i-globe"/></svg>智能搜索</button>
+        <div class="composer-actions">
+          <button class="icon-btn plain" id="btnPlus" aria-label="添加"><svg><use href="#i-plus-c"/></svg></button>
+          <button class="icon-btn plain" id="btnMic" aria-label="按住说话"><svg><use href="#i-wave"/></svg></button>
+          <button class="send-btn" id="btnSend" hidden aria-label="发送"><svg><use href="#i-arrow-up"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="disclaimer" id="disclaimer">回答由 AI 生成，仅供参考</div>
+  </div>
+
+  <button class="to-bottom" id="toBottom" hidden aria-label="回到底部"><svg><use href="#i-chev"/></svg></button>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sb-search">
+      <svg><use href="#i-search"/></svg>
+      <input id="convSearch" placeholder="搜索对话内容…" autocomplete="off">
+    </div>
+    <div class="sb-list" id="convList"></div>
+    <div class="sb-user" id="sbUser">
+      <img class="av" id="sbAvatar" alt="">
+      <div class="nm" id="sbName">砚辞</div>
+      <div class="dots"><svg width="20" height="20"><use href="#i-dots"/></svg></div>
+    </div>
+  </aside>
+
+  <div class="sheet-root" id="sheetRoot" hidden>
+    <div class="sheet-backdrop" id="sheetBackdrop"></div>
+    <section class="sheet" id="sheet"></section>
+  </div>
+
+  <div class="voice-overlay" id="voiceOverlay" hidden>
+    <div class="voice-panel">
+      <div class="voice-tip" id="voiceTip">松手发送，上滑取消</div>
+      <div class="wave" id="wave"></div>
+      <div class="voice-btn-row">
+        <button class="voice-hold" id="voiceHold"><svg><use href="#i-wave-sq"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="setup" id="setup" hidden>
+    <img class="whale" id="setupWhale" alt="" src="">
+    <h1>接入 DeepSeek API</h1>
+    <p>这个客户端直接调用你自己的 DeepSeek 官方 API。<br>密钥只保存在本机，不会上传到任何服务器。</p>
+    <div class="field">
+      <svg width="18" height="18" style="color:var(--text-3)"><use href="#i-key"/></svg>
+      <input id="setupKey" type="password" placeholder="sk-..." autocomplete="off" spellcheck="false">
+      <span class="eye" id="setupEye"><svg width="20" height="20"><use href="#i-eye"/></svg></span>
+    </div>
+    <button class="go" id="setupGo" disabled>开始对话</button>
+    <div class="err" id="setupErr"></div>
+    <div class="hint">还没有密钥？到 <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noopener">platform.deepseek.com</a> 创建，复制 <code>sk-</code> 开头的一串。密钥保存在浏览器 localStorage 中，换设备或清除浏览器数据需重新填写。</div>
+  </div>
+</div>
+
+<script>window.__WHALE__="data:image/png;base64,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";
+
+/* ==== js/00-state.js ==== */
+/* ================= state & utils ================= */
+'use strict';
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
+const DEFAULT_SETTINGS = {
+  apiKey: '',
+  baseUrl: 'https://api.deepseek.com',
+  model: 'deepseek-flash',
+  theme: 'system',
+  font: 'normal',
+  autoRead: false,
+  voice: 'stella',
+  billing: true,
+  minor: false,
+  profile: { name: '', avatar: '' },
+  draft: { think: true, search: true }
+};
+
+function genNickname() {
+  return '用户' + String(Math.floor(100000 + Math.random() * 900000));
+}
+
+const Store = {
+  KEY: 'dsx.v1',
+  data: null,
+  timer: 0,
+  load() {
+    let raw = null;
+    try { raw = localStorage.getItem(this.KEY); } catch (e) { }
+    let d = null;
+    if (raw) { try { d = JSON.parse(raw); } catch (e) { d = null; } }
+    if (!d || typeof d !== 'object') d = {};
+    this.data = {
+      convs: Array.isArray(d.convs) ? d.convs : [],
+      curId: d.curId || null,
+      settings: Object.assign({}, DEFAULT_SETTINGS, d.settings || {}),
+      ui: d.ui || {}
+    };
+    if (d.settings && d.settings.draft === undefined) this.data.settings.draft = { ...DEFAULT_SETTINGS.draft };
+    const prof = this.data.settings.profile = Object.assign({ name: '', avatar: '' }, this.data.settings.profile || {});
+    // 旧版本把作者网名当默认值，这里迁移掉，不覆盖用户自己改过的
+    if (!prof.name || prof.name === '砚辞') prof.name = genNickname();
+    return this.data;
+  },
+  save(now) {
+    clearTimeout(this.timer);
+    const run = () => {
+      try {
+        localStorage.setItem(this.KEY, JSON.stringify(this.data));
+      } catch (e) {
+        console.warn('save failed', e);
+        if (String(e).indexOf('quota') > -1) toast('本地存储已满，建议删除部分含图片的对话');
+      }
+    };
+    if (now) run(); else this.timer = setTimeout(run, 260);
+  }
+};
+
+const S = () => Store.data.settings;
+const U = () => Store.data.ui;
+
+function saveNow() { Store.save(true); }
+
+/* ---------- toast ---------- */
+let toastTimer = 0;
+function toast(msg, ms) {
+  const t = $('#toast');
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), ms || 1900);
+}
+
+/* ---------- theme / font ---------- */
+function resolveTheme() {
+  const t = S().theme;
+  if (t === 'dark') return 'dark';
+  if (t === 'light') return 'light';
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+function applyTheme() {
+  const th = resolveTheme();
+  document.documentElement.dataset.theme = th;
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', th === 'dark' ? '#0C0C0E' : '#F9F9F9');
+}
+function applyFont() {
+  document.documentElement.dataset.font = S().font || 'normal';
+}
+
+/* ---------- conversation model ---------- */
+function newConv() {
+  const c = {
+    id: uid(), title: '', createdAt: Date.now(), updatedAt: Date.now(),
+    pinned: false, messages: []
+  };
+  Store.data.convs.unshift(c);
+  Store.data.curId = c.id;
+  return c;
+}
+function curConv() {
+  const id = Store.data.curId;
+  return Store.data.convs.find(c => c.id === id) || null;
+}
+function convById(id) { return Store.data.convs.find(c => c.id === id) || null; }
+function ensureConv() {
+  let c = curConv();
+  if (!c) c = newConv();
+  return c;
+}
+function deleteConv(id) {
+  const i = Store.data.convs.findIndex(c => c.id === id);
+  if (i > -1) Store.data.convs.splice(i, 1);
+  if (Store.data.curId === id) Store.data.curId = (Store.data.convs[0] || {}).id || null;
+  Store.save();
+}
+function touched(c) {
+  c.updatedAt = Date.now();
+  const i = Store.data.convs.indexOf(c);
+  if (i > 0) { Store.data.convs.splice(i, 1); Store.data.convs.unshift(c); }
+}
+
+/* ---------- time helpers ---------- */
+function dayKey(ts) {
+  const d = new Date(ts); const n = new Date();
+  const s = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  const t = new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime();
+  const diff = Math.round((t - s) / 86400000);
+  if (diff <= 0) return '今天';
+  if (diff === 1) return '昨天';
+  if (diff <= 7) return '7 天内';
+  if (diff <= 30) return '30 天内';
+  return '更早';
+}
+function fmtCost(n) {
+  if (!isFinite(n)) return '—';
+  if (n === 0) return '0';
+  if (n < 0.0001) return '<0.0001';
+  return n.toFixed(4).replace(/0+$/, '').replace(/\.$/, '');
+}
+
+/* ---------- avatar ---------- */
+function avatarDataUri(name, size) {
+  const ch = (name || 'D').trim().slice(0, 1) || 'D';
+  const s = size || 64;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8FA6F7"/><stop offset="1" stop-color="#597AEB"/></linearGradient></defs><rect width="64" height="64" rx="32" fill="url(#g)"/><text x="32" y="42" font-size="30" font-family="-apple-system,PingFang SC,sans-serif" fill="#fff" text-anchor="middle" font-weight="600">${esc(ch)}</text></svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+}
+
+/* ---------- DOM helpers ---------- */
+function h(tag, attrs, children) {
+  const e = document.createElement(tag);
+  if (typeof attrs === 'string') attrs = { class: attrs };
+  if (attrs) for (const k in attrs) {
+    const v = attrs[k];
+    if (v == null || v === false) continue;
+    if (k === 'class') e.className = v;
+    else if (k === 'text') e.textContent = v;
+    else if (k === 'html') e.innerHTML = v;
+    else if (k.slice(0, 2) === 'on') e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v);
+  }
+  if (children) (Array.isArray(children) ? children : [children]).forEach(c => {
+    if (c == null) return;
+    e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+  });
+  return e;
+}
+function icon(id, cls) {
+  return `<svg class="${cls || ''}" aria-hidden="true"><use href="#${id}"/></svg>`;
+}
+
+/* ---------- clipboard ---------- */
+async function copyText(text) {
+  try {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+    }
+    toast('已复制');
+    return true;
+  } catch (e) { toast('复制失败'); return false; }
+}
+
+/* ---------- download ---------- */
+function downloadBlob(blob, name) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 800);
+}
+
+
+/* ==== js/10-md.js ==== */
+/* ================= markdown ================= */
+const MD = (() => {
+  const CITE_OPEN = '\u0001C', CITE_CLOSE = '\u0001';
+
+  function inline(s, cites) {
+    let t = esc(s);
+    // inline code first (protect)
+    const codes = [];
+    t = t.replace(/`([^`\n]+)`/g, (m, c) => {
+      codes.push(c); return '\u0002C' + (codes.length - 1) + '\u0002';
+    });
+    // images ![alt](url)
+    t = t.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (m, a, u) => `<img src="${u}" alt="${a}" loading="lazy">`);
+    // links
+    t = t.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, a, u) => `<a href="${u}" target="_blank" rel="noopener">${a}</a>`);
+    // bold / italic / strike
+    t = t.replace(/\*\*\*([^*]+)\*\*\*/g, '<strong><em>$1</em></strong>');
+    t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    t = t.replace(/(^|[\s(（])\*([^*\n]+)\*(?=[\s)）.,，。!?！？]|$)/g, '$1<em>$2</em>');
+    t = t.replace(/~~([^~]+)~~/g, '<del>$1</del>');
+    // restore code
+    t = t.replace(/\u0002C(\d+)\u0002/g, (m, i) => '<code>' + codes[+i] + '</code>');
+    // citations
+    t = t.replace(/\u0001C(\d+)\u0001/g, (m, i) => {
+      const c = cites && cites[+i];
+      if (!c) return '';
+      return `<sup class="cite" data-i="${i}">${i + 1}</sup>`;
+    });
+    return t;
+  }
+
+  function render(src, cites) {
+    if (!src) return '';
+    const text = String(src).replace(/\r\n?/g, '\n');
+    const lines = text.split('\n');
+    const out = [];
+    let i = 0;
+
+    while (i < lines.length) {
+      let line = lines[i];
+
+      // fenced code
+      const fence = line.match(/^\s*```([\w+#-]*)\s*$/);
+      if (fence) {
+        const lang = fence[1] || '';
+        const buf = [];
+        i++;
+        while (i < lines.length && !/^\s*```\s*$/.test(lines[i])) { buf.push(lines[i]); i++; }
+        i++;
+        out.push(`<div class="code-wrap"><div class="code-head"><span>${esc(lang || 'text')}</span><button class="copy-code" type="button">复制</button></div><pre><code>${esc(buf.join('\n'))}</code></pre></div>`);
+        continue;
+      }
+
+      // table
+      if (/^\s*\|/.test(line) && i + 1 < lines.length && /^\s*\|?[\s:|-]+\|[\s:|-]*$/.test(lines[i + 1]) && lines[i + 1].indexOf('-') > -1) {
+        const head = splitRow(line);
+        i += 2;
+        const rows = [];
+        while (i < lines.length && /^\s*\|/.test(lines[i])) { rows.push(splitRow(lines[i])); i++; }
+        let html = '<table><thead><tr>' + head.map(c => `<th>${inline(c, cites)}</th>`).join('') + '</tr></thead><tbody>';
+        rows.forEach(r => {
+          html += '<tr>' + head.map((_, k) => `<td>${inline(r[k] || '', cites)}</td>`).join('') + '</tr>';
+        });
+        out.push(html + '</tbody></table>');
+        continue;
+      }
+
+      // heading
+      const hd = line.match(/^(#{1,6})\s+(.*)$/);
+      if (hd) {
+        const lv = Math.min(hd[1].length, 4);
+        out.push(`<h${lv}>${inline(hd[2], cites)}</h${lv}>`);
+        i++; continue;
+      }
+
+      // hr
+      if (/^\s*([-*_])\s*(\1\s*){2,}$/.test(line)) { out.push('<hr>'); i++; continue; }
+
+      // blockquote
+      if (/^\s*>\s?/.test(line)) {
+        const buf = [];
+        while (i < lines.length && /^\s*>\s?/.test(lines[i])) { buf.push(lines[i].replace(/^\s*>\s?/, '')); i++; }
+        out.push('<blockquote>' + buf.map(b => inline(b, cites)).join('<br>') + '</blockquote>');
+        continue;
+      }
+
+      // lists
+      if (/^\s*([-*+]|\d+[.)])\s+/.test(line)) {
+        const ordered = /^\s*\d+[.)]\s+/.test(line);
+        const items = [];
+        while (i < lines.length && /^\s*([-*+]|\d+[.)])\s+/.test(lines[i])) {
+          let it = lines[i].replace(/^\s*([-*+]|\d+[.)])\s+/, '');
+          i++;
+          // lazy continuation lines
+          while (i < lines.length && lines[i].trim() && !/^\s*([-*+]|\d+[.)])\s+/.test(lines[i]) && !/^\s*(```|#{1,6}\s|>)/.test(lines[i])) {
+            it += '\n' + lines[i].trim(); i++;
+          }
+          items.push(it);
+        }
+        const tag = ordered ? 'ol' : 'ul';
+        out.push(`<${tag}>` + items.map(it => `<li>${inline(it, cites)}</li>`).join('') + `</${tag}>`);
+        continue;
+      }
+
+      // blank
+      if (!line.trim()) { i++; continue; }
+
+      // paragraph
+      const buf = [];
+      while (i < lines.length && lines[i].trim() &&
+        !/^\s*(```|#{1,6}\s|>\s?|([-*+]|\d+[.)])\s+)/.test(lines[i]) &&
+        !/^\s*\|/.test(lines[i])) {
+        buf.push(lines[i]); i++;
+      }
+      if (buf.length) out.push('<p>' + inline(buf.join('\n'), cites).replace(/\n/g, '<br>') + '</p>');
+      else { out.push('<p>' + inline(line, cites) + '</p>'); i++; }
+    }
+    return out.join('');
+  }
+
+  function splitRow(line) {
+    return line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(s => s.trim());
+  }
+
+  /* insert citation markers into plain text at code-point offsets */
+  function withCitations(text, annotations) {
+    if (!annotations || !annotations.length) return { text: text || '', cites: [] };
+    const cps = Array.from(text || '');
+    const cites = annotations.map(a => ({ url: a.url || (a.url_citation && a.url_citation.url) || '', title: a.title || (a.url_citation && a.url_citation.title) || '' }));
+    // process backwards so offsets stay valid
+    const list = annotations.map((a, idx) => {
+      const s = a.start_index != null ? a.start_index : (a.url_citation ? a.url_citation.start_index : 0);
+      return { s: Math.max(0, Math.min(cps.length, s)), idx };
+    }).sort((x, y) => y.s - x.s);
+    list.forEach(o => cps.splice(o.s, 0, CITE_OPEN + o.idx + CITE_CLOSE));
+    return { text: cps.join(''), cites };
+  }
+
+  function plain(src) {
+    return String(src || '')
+      .replace(/```[\s\S]*?```/g, ' ')
+      .replace(/`([^`]*)`/g, '$1')
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+      .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+      .replace(/[*_~>#|]/g, '')
+      .replace(/\u0001C\d+\u0001/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  return { render, plain, withCitations };
+})();
+
+
+/* ==== js/20-api.js ==== */
+/* ================= api ================= */
+class ApiError extends Error {
+  constructor(status, message, body) {
+    super(message); this.name = 'ApiError'; this.status = status; this.body = body || '';
+  }
+}
+
+const API = (() => {
+  const base = () => (S().baseUrl || 'https://api.deepseek.com').replace(/\/+$/, '');
+  const auth = () => ({ 'Authorization': 'Bearer ' + (S().apiKey || '').trim(), 'Content-Type': 'application/json' });
+
+  function friendly(status, bodyText) {
+    let msg = '';
+    try {
+      const j = JSON.parse(bodyText);
+      msg = (j.error && (j.error.message || j.error.type)) || j.message || '';
+    } catch (e) { msg = String(bodyText || '').slice(0, 200); }
+    const map = {
+      400: '请求参数有误',
+      401: 'API Key 无效或已过期',
+      402: '账户余额不足，请到开放平台充值',
+      403: '没有访问权限',
+      404: '接口不存在，请检查 Base URL',
+      422: '请求内容不合法',
+      429: '请求过于频繁，稍等片刻再试',
+      500: '服务器开小差了，请重试',
+      502: '网关错误，请重试',
+      503: '服务繁忙，请稍后重试',
+      504: '请求超时，请重试'
+    };
+    const head = map[status] || ('请求失败（' + status + '）');
+    return msg ? head + '：' + msg : head;
+  }
+
+  async function checkKey() {
+    const res = await fetch(base() + '/models', { headers: auth() });
+    if (!res.ok) throw new ApiError(res.status, friendly(res.status, await res.text()));
+    return true;
+  }
+
+  /**
+   * streaming chat
+   * handlers: onReasoning, onContent, onTool, onUsage
+   */
+  async function chatStream(opts) {
+    const { messages, think, search, model, signal, handlers, extras } = opts;
+    let useModel = model || S().model || 'deepseek-flash';
+    if (search && useModel !== 'deepseek-flash') useModel = 'deepseek-flash';
+    const body = {
+      model: useModel,
+      messages,
+      stream: true,
+      thinking: { type: think ? 'enabled' : 'disabled' }
+    };
+    if (think) body.reasoning_effort = 'high';
+    if (search) body.tools = [{ type: 'deepseek_web_search' }, { type: 'deepseek_read_url' }];
+    if (extras) { body.title = { enabled: true }; }
+
+    let res;
+    try {
+      res = await fetch(base() + '/chat/completions', {
+        method: 'POST', headers: auth(), body: JSON.stringify(body), signal
+      });
+    } catch (e) {
+      if (e && e.name === 'AbortError') throw e;
+      throw new ApiError(0, '网络连接失败，请检查网络后重试');
+    }
+
+    if (!res.ok) throw new ApiError(res.status, friendly(res.status, await res.text()));
+
+    const reader = res.body.getReader();
+    const dec = new TextDecoder('utf-8');
+    let buf = '';
+    let finish = '';
+    let usage = null, serverToolCalls = null, annotations = null, title = '';
+    let stepMap = new Map();
+
+    const handleTool = (ev) => {
+      if (!ev || !ev.type) return;
+      const step = ev.step != null ? ev.step : 0;
+      if (!stepMap.has(step)) stepMap.set(step, { index: step, reasoning: '', calls: [] });
+      const s = stepMap.get(step);
+      if (ev.type === 'call_started') {
+        s.calls.push(Object.assign({}, ev.call, { _live: true }));
+        handlers.onTool && handlers.onTool({ phase: 'start', step, call: ev.call });
+      } else if (ev.type === 'call_completed') {
+        const list = s.calls;
+        for (let i = list.length - 1; i >= 0; i--) {
+          if (list[i].id && ev.call && list[i].id === ev.call.id) {
+            list[i] = Object.assign(list[i], ev.call, { _live: false });
+            break;
+          }
+        }
+        handlers.onTool && handlers.onTool({ phase: 'done', step, call: ev.call });
+      }
+    };
+
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += dec.decode(value, { stream: true });
+        let nl;
+        while ((nl = buf.indexOf('\n')) > -1) {
+          const line = buf.slice(0, nl).replace(/\r$/, '');
+          buf = buf.slice(nl + 1);
+          if (!line || line[0] === ':') continue;
+          if (line.slice(0, 5) !== 'data:') continue;
+          const data = line.slice(5).trim();
+          if (data === '[DONE]') { buf = ''; break; }
+          let j;
+          try { j = JSON.parse(data); } catch (e) { continue; }
+          if (j.error) throw new ApiError(200, j.error.message || '生成中断，请重试');
+          if (j.usage) usage = j.usage;
+          const ch = j.choices && j.choices[0];
+          if (!ch) continue;
+          if (ch.usage) usage = ch.usage;
+          const d = ch.delta || {};
+          if (d.reasoning_content) handlers.onReasoning && handlers.onReasoning(d.reasoning_content);
+          if (d.content) handlers.onContent && handlers.onContent(d.content);
+          if (ch.server_tool_event) handleTool(ch.server_tool_event);
+          if (d.server_tool_calls) serverToolCalls = d.server_tool_calls;
+          if (d.annotations) annotations = d.annotations;
+          if (d.title) title = d.title;
+          if (ch.finish_reason) finish = ch.finish_reason;
+          if (j.error) throw new ApiError(200, j.error.message || '生成中断，请重试');
+        }
+      }
+    } finally {
+      try { reader.releaseLock(); } catch (e) { }
+    }
+
+    const steps = Array.from(stepMap.values()).sort((a, b) => a.index - b.index);
+    return { finish, usage, serverToolCalls, annotations, steps, title };
+  }
+
+  async function uploadFile(file) {
+    const name = (file.name || '').toLowerCase();
+    const ext = (name.split('.').pop() || '');
+    let purpose = 'text_recognition';
+    if (['txt', 'md', 'markdown', 'csv', 'json', 'log', 'xml', 'html', 'htm', 'yml', 'yaml', 'ini', 'js', 'ts', 'py', 'java', 'c', 'cpp', 'go', 'rs', 'sql', 'sh', 'xlsx', 'xls', 'epub', 'mobi'].indexOf(ext) > -1) {
+      purpose = 'user_data';
+    } else if (['pdf', 'ppt', 'pptx'].indexOf(ext) > -1) {
+      purpose = 'rich_layout_recognition';
+    }
+    const form = new FormData();
+    form.append('purpose', purpose);
+    form.append('file', file, file.name || 'file');
+    const res = await fetch(base() + '/files', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + (S().apiKey || '').trim() },
+      body: form
+    });
+    if (!res.ok) throw new ApiError(res.status, friendly(res.status, await res.text()));
+    const j = await res.json();
+    return { id: j.id, name: file.name, purpose };
+  }
+
+  async function asr(blob) {
+    const form = new FormData();
+    form.append('file', blob, 'speech.wav');
+    const res = await fetch(base() + '/v1/tools/asr', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + (S().apiKey || '').trim() },
+      body: form
+    });
+    if (!res.ok) throw new ApiError(res.status, friendly(res.status, await res.text()));
+    const j = await res.json();
+    return (j.text || '').trim();
+  }
+
+  async function tts(text, voice) {
+    const res = await fetch(base() + '/v1/tools/tts', {
+      method: 'POST',
+      headers: auth(),
+      body: JSON.stringify({ text, voice_id: voice || S().voice || 'stella', format: 'wav', filter_markdown: true })
+    });
+    if (!res.ok) throw new ApiError(res.status, friendly(res.status, await res.text()));
+    return await res.blob();
+  }
+
+  return { checkKey, chatStream, uploadFile, asr, tts, base };
+})();
+
+/* ---------- pricing ---------- */
+const PRICES = {
+  'deepseek-flash': { hit: [0.02, 0.04], miss: [1, 2], out: [4, 8] },
+  'deepseek-v4-pro': { hit: [0.15, 0.30], miss: [4.5, 9], out: [13.5, 27] }
+};
+
+function isPeakHour(d) {
+  const t = new Date((d ? d.getTime() : Date.now()) + 8 * 3600 * 1000);
+  const wd = t.getUTCDay();
+  const hm = t.getUTCHours() + t.getUTCMinutes() / 60;
+  if (wd === 0 || wd === 6) return false;
+  return (hm >= 9 && hm < 12) || (hm >= 14 && hm < 18);
+}
+
+function normalizeUsage(u) {
+  if (!u) return null;
+  const hit = u.prompt_cache_hit_tokens != null ? u.prompt_cache_hit_tokens : (u.cache_read_input_tokens || 0);
+  const inp = u.prompt_tokens != null ? u.prompt_tokens : (u.input_tokens || 0);
+  const miss = u.prompt_cache_miss_tokens != null ? u.prompt_cache_miss_tokens : Math.max(0, inp - hit);
+  const out = u.completion_tokens != null ? u.completion_tokens : (u.output_tokens || 0);
+  const thinkTok = (u.completion_tokens_details && u.completion_tokens_details.reasoning_tokens) ||
+    (u.output_tokens_details && u.output_tokens_details.thinking_tokens) || 0;
+  const tool = u.server_tool_use || null;
+  return { hit, miss, input: inp, out, thinkTok, tool, total: inp + out };
+}
+
+function costOf(usage, model) {
+  const u = normalizeUsage(usage);
+  if (!u) return null;
+  const p = PRICES[model] || PRICES['deepseek-flash'];
+  const peak = isPeakHour();
+  const k = peak ? 1 : 0;
+  const cHit = u.hit / 1e6 * p.hit[k];
+  const cMiss = u.miss / 1e6 * p.miss[k];
+  const cOut = u.out / 1e6 * p.out[k];
+  return {
+    usage: u, peak, model: model || S().model,
+    price: { hit: p.hit[k], miss: p.miss[k], out: p.out[k] },
+    cHit, cMiss, cOut, total: cHit + cMiss + cOut
+  };
+}
+
+
+/* ==== js/30-chat.js ==== */
+/* ================= chat view ================= */
+const Chat = (() => {
+  let streaming = false;
+  let abortCtl = null;
+  let dirty = false;
+  let rafId = 0;
+  let curEl = null;
+  let startAt = 0;
+  let firstTokenAt = 0;
+
+  const draft = () => (S().draft = S().draft || { think: true, search: false });
+
+  /* ---------- api payload ---------- */
+  function reminderText() {
+    const d = new Date();
+    const wd = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'][d.getDay()];
+    const p2 = n => String(n).padStart(2, '0');
+    const date = d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate());
+    const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+    const loc = /Asia\/(Shanghai|Chongqing|Urumqi|Harbin)/.test(tz) ? '中国' : '未知';
+    return date + ',' + wd + ',' + loc + ',App,中文';
+  }
+
+  function buildMessages(conv, withReminder) {
+    const out = [];
+    conv.messages.forEach(m => {
+      if (m.role === 'user') {
+        const blocks = [];
+        (m.attachments || []).forEach(a => {
+          if (a.kind === 'image' && a.dataUrl) blocks.push({ type: 'image_url', image_url: { url: a.dataUrl } });
+          else if (a.kind === 'file' && a.fileId) blocks.push({ type: 'file', file_id: a.fileId });
+        });
+        if (blocks.length) {
+          if (m.content) blocks.push({ type: 'text', text: m.content });
+          out.push({ role: 'user', content: blocks });
+        } else if (m.content) {
+          out.push({ role: 'user', content: m.content });
+        }
+      } else if (m.role === 'assistant' && m.content && !m.error) {
+        const o = { role: 'assistant', content: m.content };
+        if (m.reasoning) o.reasoning_content = m.reasoning;
+        if (m.serverToolCalls) o.server_tool_calls = m.serverToolCalls;
+        out.push(o);
+      }
+    });
+    if (withReminder) {
+      let li = -1;
+      for (let i = out.length - 1; i >= 0; i--) { if (out[i].role === 'user') { li = i; break; } }
+      if (li > -1) out.splice(li, 0, { role: 'latest_reminder', content: reminderText() });
+    }
+    return out;
+  }
+
+  /* ---------- rendering ---------- */
+  function el(tag, cls, html) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+
+  function renderAll() {
+    const conv = curConv();
+    const box = $('#messages');
+    box.innerHTML = '';
+    $('#empty').hidden = !!(conv && conv.messages.length);
+    if (!conv) return;
+    conv.messages.forEach(m => box.appendChild(renderMsg(m)));
+    if (streaming) {
+      const target = conv.messages.find(m => m.streaming);
+      curEl = target ? box.querySelector('[data-id="' + target.id + '"]') : null;
+      if (curEl) curEl.__m = target;
+    }
+    scrollBottom(true);
+    updateTitle();
+    if (window.__syncBottomBtn) window.__syncBottomBtn();
+  }
+
+  function updateTitle() {
+    const c = curConv();
+    const t = c && c.title ? c.title : '';
+    const el2 = $('#convTitle');
+    el2.textContent = t;
+    const sc = $('#scroll');
+    el2.classList.toggle('show', !!t && (sc.scrollTop > 26 || (c && c.messages.length > 0)));
+  }
+
+  function renderMsg(m) {
+    if (m.role === 'user') return renderUser(m);
+    return renderAI(m);
+  }
+
+  function renderUser(m) {
+    const wrap = el('div', 'msg user');
+    wrap.dataset.id = m.id;
+    const b = el('div', 'bubble');
+    const inner = el('div', 'bubble-body');
+    if ((m.attachments || []).length) {
+      const at = el('div', 'bubble-attach');
+      m.attachments.forEach(a => {
+        if (a.kind === 'image' && a.dataUrl) {
+          const img = el('img', 'attach-thumb'); img.src = a.dataUrl; at.appendChild(img);
+        } else {
+          const f = el('div', 'attach-file');
+          f.innerHTML = `<span class="nm">${esc(a.name || '文件')}</span>`;
+          at.appendChild(f);
+        }
+      });
+      inner.appendChild(at);
+    }
+    if (m.content) {
+      const t = el('div', 'utext');
+      t.textContent = m.content;
+      inner.appendChild(t);
+    }
+    b.appendChild(inner);
+    wrap.appendChild(b);
+    return wrap;
+  }
+
+  function renderAI(m) {
+    const wrap = el('div', 'msg ai');
+    wrap.dataset.id = m.id;
+
+    // thinking block
+    if (m.showThink) {
+      const think = el('div', 'think' + (m.thinkOpen ? ' open' : ''));
+      if (m.streamingThink) think.classList.add('thinking-live');
+      const head = el('button', 'think-head');
+      head.type = 'button';
+      head.dataset.act = 'toggle-think';
+      let label;
+      if (m.streamingThink) {
+        label = '思考中<span class="think-dots"><i></i><i></i><i></i></span>';
+      } else {
+        const sec = Math.max(1, Math.round((m.thinkMs || 1000) / 1000));
+        label = `已思考（用时 ${sec} 秒）`;
+      }
+      head.innerHTML = `<span>${label}</span><svg class="chev"><use href="#i-chev-r"/></svg>`;
+      think.appendChild(head);
+      const body = el('div', 'think-body');
+      body.innerHTML = renderThinkSeq(m);
+      think.appendChild(body);
+      wrap.appendChild(think);
+    }
+
+    const ans = el('div', 'answer');
+    if (m.content) {
+      const cit = MD.withCitations(m.content, m.annotations);
+      ans.innerHTML = MD.render(cit.text, cit.cites);
+      if (m.streaming) {
+        const caret = el('span', 'caret'); ans.appendChild(caret);
+      }
+    } else if (m.streaming) {
+      ans.innerHTML = '<span class="caret"></span>';
+    }
+    wrap.appendChild(ans);
+
+    const srcs = m.streaming ? [] : collectSources(m);
+    if (srcs.length) {
+      const pill = el('button', 'sources');
+      pill.type = 'button';
+      pill.dataset.act = 'sources';
+      const favs = srcs.slice(0, 3).map(s => s.icon ? `<img class="fav" src="${esc(s.icon)}" onerror="this.outerHTML='<span class=&quot;fav fav-ph&quot;><svg><use href=&quot;#i-globe&quot;/></svg></span>'">` : `<span class="fav fav-ph"><svg><use href="#i-globe"/></svg></span>`).join('');
+      pill.innerHTML = `<span class="favs">${favs}</span><span>${srcs.length} 个网页</span>`;
+      wrap.appendChild(pill);
+    }
+
+    if (!m.streaming && m.content && srcs.length) {
+      wrap.appendChild(el('div', 'answer-note', '本回答由 AI 生成，内容仅供参考，请仔细甄别'));
+    }
+
+    if (m.error) {
+      const eb = el('div', 'err-box');
+      const needsKey = m.errStatus === 401 || m.errStatus === 402 || m.errStatus === 403;
+      eb.innerHTML = `<div>${esc(m.error)}</div><div class="err-acts"><button type="button" data-act="retry">重试</button>${needsKey ? '<button type="button" data-act="apiset">去设置 API</button>' : ''}</div>`;
+      wrap.appendChild(eb);
+    }
+
+    if (!m.streaming && m.stopped && m.content) {
+      const sn = el('div', 'answer-note stopped');
+      sn.textContent = '已停止生成';
+      wrap.appendChild(sn);
+    }
+    if (!m.streaming && m.content) {
+      wrap.appendChild(renderActions(m));
+    }
+    return wrap;
+  }
+
+  function renderActions(m) {
+    const a = el('div', 'actions');
+    a.innerHTML =
+      `<button type="button" data-act="copy" aria-label="复制" title="复制">${icon('i-copy')}</button>` +
+      `<button type="button" data-act="like" aria-label="赞" title="赞">${icon('i-up')}</button>` +
+      `<button type="button" data-act="dislike" aria-label="踩" title="踩">${icon('i-down')}</button>` +
+      `<button type="button" data-act="read" aria-label="朗读" title="朗读">${icon('i-speaker')}</button>` +
+      `<button type="button" data-act="share" aria-label="分享" title="分享">${icon('i-share')}</button>` +
+      `<span class="spacer"></span>` +
+      (S().billing && m.usage ? `<button type="button" class="bill" data-act="bill" aria-label="本轮消耗额度" title="本轮消耗额度">¥ ${fmtCost(costOf(m.usage, m.model).total)}</button>` : '') +
+      `<button type="button" data-act="regen" title="重新生成">${icon('i-refresh')}</button>`;
+    return a;
+  }
+
+  function isPageCall(c) {
+    return !!(c && c.action && c.action.type === 'open_page');
+  }
+
+  function renderThinkSeq(m) {
+    const seq = m.thinkSeq || [];
+    if (!seq.length && !m.reasoning) return `<div class="think-p"><span class="dot">\u2022</span><span class="tx">${esc('正在思考\u2026')}</span></div>`;
+    let html = '';
+    let i = 0;
+    while (i < seq.length) {
+      const item = seq[i];
+      if (item.type === 'reason') {
+        const paras = String(item.text || '').split(/\n{2,}/).map(s => s.trim()).filter(Boolean);
+        paras.forEach(p => {
+          html += `<div class="think-p"><span class="dot">\u2022</span><span class="tx">${esc(p)}</span></div>`;
+        });
+        i++;
+      } else if (item.type === 'call') {
+        if (isPageCall(item.call)) {
+          let n = 0; const list = [];
+          while (i < seq.length && seq[i].type === 'call' && isPageCall(seq[i].call)) {
+            const c = seq[i].call;
+            n++;
+            if (c.page && (c.page.title || c.page.url)) list.push({ url: c.page.url, title: c.page.title, icon: '' });
+            (c.sources || []).forEach(x => list.push({ url: x.url, title: x.title, icon: x.site_icon || '' }));
+            i++;
+          }
+          const src = uniqSources(list).slice(0, 4);
+          const favs = src.map(x => x.icon ? `<img class="fav" src="${esc(x.icon)}" onerror="this.remove()">` : '').join('');
+          html += `<div class="tool-row"><svg class="ti"><use href="#i-doc"/></svg><span>${n > 1 ? '已浏览 ' + n + ' 个页面' : '已浏览页面'}</span><span class="favs">${favs}</span></div>`;
+        } else {
+          html += renderToolRow(item.call);
+          i++;
+        }
+      } else i++;
+    }
+    return html || `<div class="think-p"><span class="dot">\u2022</span><span class="tx">${esc('正在思考\u2026')}</span></div>`;
+  }
+
+  function renderToolRow(call) {
+    if (!call) return '';
+    const k = call.kind || '';
+    const act = (call.action && call.action.type) || '';
+    let label = '', ico = 'i-magnify';
+    if (k === 'search' || act === 'search') {
+      const n = uniqSources(call.sources || []).length;
+      label = `搜索到 ${n || ''} 个网页`;
+    } else if (k === 'image_search' || k === 'deep_image_search') {
+      const n = uniqSources(call.sources || []).length;
+      label = `搜索到 ${n || ''} 张图片`;
+    } else if (act === 'open_page' || k === 'deep_search') {
+      label = `已浏览页面`; ico = 'i-doc';
+    } else if (act === 'find_in_page') {
+      label = `页面内查找`; ico = 'i-search';
+    } else if (k === 'read_link') {
+      label = `阅读链接`; ico = 'i-doc';
+    } else {
+      label = '正在检索'; ico = 'i-magnify';
+    }
+    if (call._live) label = '正在' + label.replace(/^搜索到.*/, '搜索') + '…';
+    const src = uniqSources(call.sources || []).slice(0, 4);
+    const favs = src.map(s => s.icon ? `<img class="fav" src="${esc(s.icon)}" onerror="this.remove()">` : '').join('');
+    return `<div class="tool-row"><svg class="ti"><use href="#${ico}"/></svg><span>${esc(label)}</span><span class="favs">${favs}</span></div>`;
+  }
+
+  function uniqSources(list) {
+    const seen = new Set(); const out = [];
+    (list || []).forEach(s => {
+      if (!s || !s.url) return;
+      if (seen.has(s.url)) return;
+      seen.add(s.url);
+      out.push({ url: s.url, title: s.title, icon: s.site_icon || '', snippet: s.snippet || '' });
+    });
+    return out;
+  }
+
+  function collectSources(m) {
+    const all = [];
+    (m.steps || []).forEach(st => (st.calls || []).forEach(c => all.push.apply(all, uniqSources(c.sources || []))));
+    return uniqSources(all);
+  }
+
+  /* ---------- streaming re-render ---------- */
+  let renderTimer = 0;
+  let lastRenderAt = 0;
+
+  function scheduleRender() {
+    dirty = true;
+    if (renderTimer) return;
+    const wait = Math.max(0, 90 - (Date.now() - lastRenderAt));
+    renderTimer = setTimeout(() => {
+      renderTimer = 0;
+      if (!dirty) return;
+      dirty = false;
+      if (!streaming || !curEl) return;
+      const m = curEl.__m;
+      if (!m) return;
+      lastRenderAt = Date.now();
+      const nearBottom = isNearBottom();
+      const fresh = renderAI(m);
+      curEl.replaceWith(fresh);
+      curEl = fresh; curEl.__m = m;
+      if (nearBottom) scrollBottom(true);
+    }, wait);
+  }
+
+  function isNearBottom() {
+    const sc = $('#scroll');
+    return sc.scrollHeight - sc.scrollTop - sc.clientHeight < 160;
+  }
+  function scrollBottom(force) {
+    const sc = $('#scroll');
+    if (!sc) return;
+    if (force || isNearBottom()) sc.scrollTop = sc.scrollHeight;
+  }
+
+  /* ---------- send ---------- */
+  async function send(text, opts) {
+    opts = opts || {};
+    if (streaming) { toast('正在生成，先停止再发送'); return; }
+    if (!S().apiKey) { openSetup(); return; }
+    const conv = ensureConv();
+    const d = draft();
+    const think = opts.think != null ? opts.think : !!d.think;
+    const search = opts.search != null ? opts.search : !!d.search;
+
+    let content = (text || '').trim();
+    const atts = (opts.attachments || draftAtts()).slice();
+    if (!content && !atts.length) return;
+
+    // 与原版一致：深度思考用一次后自动关闭，智能搜索保持
+    if (think) { d.think = false; Store.save(); }
+
+    if (!opts.silent) {
+      const um = { id: uid(), role: 'user', content, attachments: atts, createdAt: Date.now() };
+      conv.messages.push(um);
+      if (!conv.title) conv.title = (content || (atts[0] && atts[0].name) || '新对话').slice(0, 20);
+      clearDraftAtts();
+      renderAll();
+    }
+
+    const am = {
+      id: uid(), role: 'assistant', content: '', reasoning: '',
+      thinkSeq: [], steps: [], streaming: true, streamingThink: think,
+      showThink: think, thinkOpen: false, model: S().model, createdAt: Date.now()
+    };
+    conv.messages.push(am);
+    touched(conv);
+    renderAll();
+    curEl = $('#messages').lastElementChild;
+    curEl.__m = am;
+
+    streaming = true;
+    startAt = Date.now();
+    firstTokenAt = 0;
+    abortCtl = new AbortController();
+    updateSendBtn();
+
+    let attempt = 0;
+    let useExtras = true;
+
+    const run = async () => {
+      while (true) {
+        try {
+          const messages = buildMessages(conv, useExtras);
+          const r = await API.chatStream({
+            messages, think, search, model: am.model, signal: abortCtl.signal, extras: useExtras,
+            handlers: {
+              onReasoning: (t) => {
+                if (!firstTokenAt) firstTokenAt = Date.now();
+                am.reasoning += t;
+                const last = am.thinkSeq[am.thinkSeq.length - 1];
+                if (last && last.type === 'reason') last.text += t;
+                else am.thinkSeq.push({ type: 'reason', text: t });
+                scheduleRender();
+              },
+              onContent: (t) => {
+                if (!firstTokenAt) firstTokenAt = Date.now();
+                am.content += t;
+                am.streamingThink = false;
+                scheduleRender();
+              },
+              onTool: (ev) => {
+                if (ev.phase === 'start') {
+                  am.thinkSeq.push({ type: 'call', call: ev.call });
+                } else {
+                  for (let i = am.thinkSeq.length - 1; i >= 0; i--) {
+                    const it = am.thinkSeq[i];
+                    if (it.type === 'call') {
+                      it.call = Object.assign({}, it.call, ev.call, { _live: false });
+                      break;
+                    }
+                  }
+                  const st = am.steps.find(s => s.index === ev.step) || { index: ev.step, calls: [] };
+                  st.calls.push(ev.call);
+                  if (!am.steps.includes(st)) am.steps.push(st);
+                }
+                scheduleRender();
+              }
+            }
+          });
+          if (r.title && conv.messages.length <= 2) { conv.title = String(r.title).slice(0, 40); }
+          am.annotations = r.annotations || null;
+          am.serverToolCalls = r.serverToolCalls || null;
+          am.usage = r.usage || null;
+          am.finish = r.finish;
+          if (r.steps && r.steps.length) am.steps = r.steps;
+          break;
+        } catch (e) {
+          if (e && e.name === 'AbortError') { am.stopped = true; break; }
+          const status = e && e.status;
+          if (status === 400 && useExtras && attempt < 2) {
+            useExtras = false; attempt++;
+            continue;
+          }
+          if ((status === 429 || status === 503 || status === 502 || status === 504) && attempt < 2) {
+            attempt++;
+            am.error = null;
+            toast((status === 429 ? '请求太频繁' : '服务繁忙') + '，正在重试（' + attempt + '/2）…');
+            await sleep(1500 * attempt);
+            continue;
+          }
+          am.error = (e && e.status) ? (e.message || '请求失败') : '网络连接失败，请检查网络后重试';
+          am.errStatus = status || 0;
+          break;
+        }
+      }
+    };
+
+    try {
+      await run();
+    } finally {
+      streaming = false;
+      am.streaming = false;
+      am.streamingThink = false;
+    }
+
+    am.thinkMs = (firstTokenAt || Date.now()) - startAt;
+    if (!am.reasoning && !am.thinkSeq.length) am.showThink = false;
+    else am.showThink = true;
+    if (!am.content && !am.reasoning && !am.error && !am.stopped) am.error = '没有收到回复，请重试';
+    if (!am.content && am.error) am.lean = true;
+    touched(conv);
+    Store.save();
+    curEl = null;
+    renderAll();
+    updateSendBtn();
+    if (S().autoRead && am.content && curConv() === conv) readAloud(am);
+    if (am.error) scrollBottom(true);
+  }
+
+  function stop() {
+    if (abortCtl) { try { abortCtl.abort(); } catch (e) { } }
+    streaming = false;
+    updateSendBtn();
+  }
+
+  /* ---------- regenerate ---------- */
+  function regenerate(msgId) {
+    const conv = curConv();
+    if (!conv) return;
+    const i = conv.messages.findIndex(m => m.id === msgId);
+    if (i < 0) return;
+    // remove this assistant message
+    conv.messages.splice(i, 1);
+    // find previous user message
+    let ui = -1;
+    for (let k = conv.messages.length - 1; k >= 0; k--) { if (conv.messages[k].role === 'user') { ui = k; break; } }
+    if (ui < 0) { renderAll(); return; }
+    const userMsg = conv.messages[ui];
+    // remove trailing assistant after that user
+    conv.messages.splice(ui + 1);
+    const atts = userMsg.attachments || [];
+    const text = userMsg.content;
+    conv.messages.splice(ui, 1);
+    touched(conv);
+    send(text, { attachments: atts, silent: false });
+  }
+
+  /* ---------- read aloud ---------- */
+  let audioEl = null;
+  async function readAloud(m) {
+    const text = MD.plain(m.content || '');
+    if (!text) return;
+    try {
+      toast('正在合成语音…');
+      const blob = await API.tts(text.slice(0, 9000));
+      if (audioEl) { try { audioEl.pause(); } catch (e) { } audioEl = null; }
+      const url = URL.createObjectURL(blob);
+      audioEl = new Audio(url);
+      audioEl.play().catch(() => toast('点一下页面再试'));
+      audioEl.onended = () => { try { URL.revokeObjectURL(url); } catch (e) { } audioEl = null; };
+    } catch (e) {
+      toast(e.message || '语音合成失败');
+    }
+  }
+
+  /* ---------- draft attachments ---------- */
+  function draftAtts() {
+    U().atts = U().atts || [];
+    return U().atts;
+  }
+  function clearDraftAtts() { U().atts = []; renderAtts(); }
+  function renderAtts() {
+    const box = $('#attachPreview');
+    const list = draftAtts();
+    box.innerHTML = '';
+    if (!list.length) { box.hidden = true; return; }
+    box.hidden = false;
+    list.forEach((a, i) => {
+      const c = el('div', 'attach-chip' + (a.kind === 'image' ? ' img' : ''));
+      if (a.kind === 'image' && a.dataUrl) {
+        c.innerHTML = `<img src="${a.dataUrl}" alt=""><button class="rm" type="button" data-i="${i}">✕</button>`;
+      } else {
+        c.innerHTML = `<span class="nm">${esc(a.name || '文件')}</span>${a.uploading ? '<span style="font-size:11px;color:var(--text-3)">上传中</span>' : `<button class="rm" type="button" data-i="${i}">✕</button>`}`;
+      }
+      box.appendChild(c);
+    });
+  }
+
+  function toggleThink(msgId) {
+    const m = findMsgById(msgId);
+    if (!m) return;
+    m.thinkOpen = !m.thinkOpen;
+    renderAll();
+  }
+
+  function findMsgById(id) {
+    const c = curConv();
+    if (!c) return null;
+    return c.messages.find(x => x.id === id) || null;
+  }
+
+  return {
+    renderAll, send, stop, regenerate, readAloud, toggleThink, findMsgById,
+    renderAtts, draftAtts, clearDraftAtts,
+    isStreaming: () => streaming,
+    updateSendBtn
+  };
+
+  function updateSendBtn() {
+    const hasText = ($('#input').value || '').trim().length > 0;
+    const hasAtt = draftAtts().length > 0;
+    const uploading = draftAtts().some(a => a.uploading);
+    const btn = $('#btnSend');
+    btn.hidden = !(hasText || hasAtt || streaming);
+    $('#btnMic').hidden = !!(hasText || hasAtt) || streaming;
+    if (streaming) {
+      btn.classList.add('stop');
+      btn.innerHTML = '<svg><use href="#i-stop"/></svg>';
+      btn.disabled = false;
+    } else {
+      btn.classList.remove('stop');
+      btn.innerHTML = '<svg><use href="#i-arrow-up"/></svg>';
+      btn.disabled = false;
+    }
+    if (!streaming && uploading) { btn.disabled = true; btn.title = '文件上传中'; }
+    else { btn.disabled = false; btn.title = ''; }
+    $('#chipThink').classList.toggle('on', !!draft().think);
+    $('#chipSearch').classList.toggle('on', !!draft().search);
+    const ar = S().autoRead;
+    $('#autoReadIcon').setAttribute('href', ar ? '#i-speaker' : '#i-speaker-off');
+  }
+})();
+
+
+/* ==== js/40-nav.js ==== */
+/* ================= navigation / sheets ================= */
+const Nav = (() => {
+  let stack = [];
+  let onCloseCb = null;
+
+  function root() { return $('#sheetRoot'); }
+  function sheetEl() { return $('#sheet'); }
+
+  function renderTop() {
+    const cfg = stack[stack.length - 1];
+    if (!cfg) return;
+    const s = sheetEl();
+    s.className = 'sheet' + (cfg.full ? ' full' : '') + (cfg.glass ? ' glass' : '') + (cfg.cls ? ' ' + cfg.cls : '');
+    s.innerHTML = '';
+    s.onclick = null;
+    if (cfg.head !== false) {
+      const head = h('div', 'sheet-head');
+      if (stack.length > 1) {
+        const b = h('button', 'back'); b.innerHTML = '<svg><use href="#i-back"/></svg>';
+        b.onclick = () => back();
+        head.appendChild(b);
+      }
+      const t = h('div', 'ttl', cfg.title || '');
+      head.appendChild(t);
+      if (cfg.headClose !== false) {
+        const c = h('button', 'close'); c.innerHTML = '<svg><use href="#i-close"/></svg>';
+        c.onclick = () => closeAll();
+        head.appendChild(c);
+      }
+      s.appendChild(head);
+    }
+    const body = h('div', 'sheet-body');
+    if (typeof cfg.body === 'function') body.innerHTML = cfg.body();
+    else if (typeof cfg.body === 'string') body.innerHTML = cfg.body;
+    else if (cfg.body) body.appendChild(cfg.body);
+    s.appendChild(body);
+    if (cfg.footer) s.appendChild(cfg.footer);
+    if (cfg.after) cfg.after(body);
+  }
+
+  let hideTimer = 0;
+
+  function open(cfg) {
+    clearTimeout(hideTimer);
+    stack.push(cfg);
+    const r = root();
+    r.hidden = false;
+    r.style.pointerEvents = '';
+    r.classList.toggle('blurred', cfg.cls === 'plus-sheet');
+    renderTop();
+    const s = sheetEl();
+    s.classList.remove('in');
+    void s.offsetWidth;
+    s.classList.add('in');
+    r.classList.add('visible');
+    $('#sheetBackdrop').onclick = () => closeAll();
+  }
+
+  function back() {
+    if (stack.length <= 1) return closeAll();
+    stack.pop();
+    renderTop();
+  }
+
+  /* 收起：立刻变成不可见且不拦截点击，DOM 清理由定时器兜底。
+     即使定时器被后续 open 清掉，也不会留下模糊遮罩。 */
+  function hideNow() {
+    clearTimeout(hideTimer);
+    const r = root();
+    const s = sheetEl();
+    s.classList.remove('in');
+    r.classList.remove('visible', 'blurred');
+    r.style.pointerEvents = 'none';
+    stack = [];
+    hideTimer = setTimeout(() => {
+      if (stack.length) return;
+      r.hidden = true;
+      s.innerHTML = '';
+      r.style.pointerEvents = '';
+    }, 260);
+  }
+
+  function closeAll() { hideNow(); }
+
+  /* 关闭当前弹层并立即换一个（用于改完设置后回到列表，避免重复入栈） */
+  function reopen(fn) {
+    hideNow();
+    setTimeout(fn, 30);
+  }
+
+  /* ---------- common row ---------- */
+  function row(ico, label, value, act, opts) {
+    opts = opts || {};
+    return `<div class="row${opts.danger ? ' danger' : ''}" ${act ? `data-act="${act}"` : ''}>
+      <span class="ri"><svg><use href="#${ico}"/></svg></span>
+      <span class="rl">${esc(label)}</span>
+      ${value != null ? `<span class="rv">${esc(value)}</span>` : ''}
+      ${opts.noChev ? '' : '<svg class="rc"><use href="#i-chev-r"/></svg>'}
+    </div>`;
+  }
+  function switchRow(ico, label, on, act) {
+    return `<div class="row" data-act="${act}">
+      ${ico ? `<span class="ri"><svg><use href="#${ico}"/></svg></span>` : ''}
+      <span class="rl">${esc(label)}</span>
+      <span class="switch${on ? ' on' : ''}"></span>
+    </div>`;
+  }
+
+  /* ---------- settings ---------- */
+  function settings() {
+    const s = S();
+    const themeName = s.theme === 'system' ? '跟随系统' : (s.theme === 'dark' ? '深色' : '浅色');
+    const body = `
+      <div class="group-label">账户</div>
+      <div class="card">
+        ${row('i-user', '账号管理', '', 'account')}
+        ${row('i-db', '数据管理', '', 'data')}
+        ${row('i-key', 'API 设置', s.apiKey ? '已接入' : '未接入', 'api')}
+      </div>
+      <div class="group-label">应用</div>
+      <div class="card">
+        ${row('i-lang', '语言', '简体中文', 'lang')}
+        ${row('i-sun', '外观', themeName, 'theme')}
+        ${row('i-aa', '字体大小', { small: '小', normal: '标准', large: '大', xlarge: '特大' }[s.font] || '标准', 'font')}
+        ${row('i-spark', '个性化', '', 'personal')}
+      </div>
+      <div class="group-label">语音</div>
+      <div class="card">
+        ${row('i-speaker', '朗读音色', s.voice === 'tide' ? '暗潮' : '海星', 'voice')}
+        ${switchRow('i-speaker', '自动朗读回答', !!s.autoRead, 'toggle-autoread')}
+      </div>
+      <div class="group-label">关于</div>
+      <div class="card">
+        ${row('i-info', '检查更新', '2.5.1(1)', 'check-update')}
+        ${row('i-doc', '服务协议', '', 'terms')}
+      </div>
+      <div class="card" style="margin-top:12px">
+        ${row('i-help', '帮助与反馈', '', 'help')}
+      </div>
+      <div class="row about-min" style="background:none">DeepSeek 本机 API 客户端 · 数据仅存于本机</div>
+    `;
+    open({ title: '设置', body, full: true, after: bindSettings });
+  }
+
+  function bindSettings(box) {
+    box.addEventListener('click', (e) => {
+      const r = e.target.closest('[data-act]');
+      if (!r) return;
+      const act = r.dataset.act;
+      if (act === 'account') { account(); }
+      else if (act === 'data') { dataSheet(); }
+      else if (act === 'api') { apiSheet(); }
+      else if (act === 'lang') { toast('当前仅支持简体中文'); }
+      else if (act === 'theme') { themeSheet(); }
+      else if (act === 'font') { fontSheet(); }
+      else if (act === 'personal') { personalSheet(); }
+      else if (act === 'voice') { voiceSheet(); }
+      else if (act === 'toggle-autoread') { S().autoRead = !S().autoRead; Store.save(); Chat.updateSendBtn(); renderTop(); }
+      else if (act === 'check-update') { toast('已是最新版本 2.5.1(1)'); }
+      else if (act === 'terms') { termsSheet(); }
+      else if (act === 'help') { helpSheet(); }
+    });
+  }
+
+  function themeSheet() {
+    const cur = S().theme;
+    const opt = (k, t) => `<div class="row" data-t="${k}"><span class="rl">${t}</span>${cur === k ? '<span class="ri" style="color:var(--blue)"><svg><use href="#i-check"/></svg></span>' : ''}</div>`;
+    open({
+      title: '外观', full: true, body: `<div class="card">${opt('light', '浅色')}${opt('dark', '深色')}${opt('system', '跟随系统')}</div>`,
+      after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-t]'); if (!r) return;
+        S().theme = r.dataset.t; Store.save(); applyTheme(); reopen(settings);
+      })
+    });
+  }
+
+  function fontSheet() {
+    const cur = S().font;
+    const names = { small: '小', normal: '标准', large: '大', xlarge: '特大' };
+    const px = { small: 15.5, normal: 17, large: 18, xlarge: 19.5 };
+    const opt = (k) => `<div class="row" data-f="${k}"><span class="rl">${names[k]}</span>${cur === k ? '<span class="ri" style="color:var(--blue)"><svg><use href="#i-check"/></svg></span>' : ''}</div>`;
+    const preview = `<div class="card" style="margin-top:8px;padding:16px 18px">
+      <div style="font-size:${px[cur] || 17}px;line-height:1.7;color:var(--text)">你好，这是一段示例文字。<br>DeepSeek 会按这个字号显示回答。</div>
+    </div>`;
+    open({
+      title: '字体大小', full: true, body: preview + `<div class="group-label">选择字号</div><div class="card">${opt('small')}${opt('normal')}${opt('large')}${opt('xlarge')}</div>`,
+      after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-f]'); if (!r) return;
+        S().font = r.dataset.f; Store.save(); applyFont(); reopen(settings);
+      })
+    });
+  }
+
+  function voiceSheet() {
+    const cur = S().voice;
+    const item = (k, t, d) => `<div class="row" data-v="${k}">
+      <span class="ri"><svg><use href="#i-speaker"/></svg></span>
+      <span class="rl">${t}<div style="font-size:12.5px;color:var(--text-3);margin-top:2px">${d}</div></span>
+      ${cur === k ? '<span class="ri" style="color:var(--blue)"><svg><use href="#i-check"/></svg></span>' : ''}
+    </div>`;
+    open({
+      title: '朗读音色', full: true, body: `<div class="card">${item('stella', '海星', '女声 · 默认')}${item('tide', '暗潮', '男声')}</div>`,
+      after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-v]'); if (!r) return;
+        S().voice = r.dataset.v; Store.save(); toast('已切换音色'); reopen(settings);
+      })
+    });
+  }
+
+  function personalSheet() {
+    const body = () => {
+      const p = S().profile;
+      return `
+      <div class="card" style="margin-top:8px">
+        <div class="row" data-act="avatar">
+          <span class="ri"><img src="${p.avatar || avatarDataUri(p.name)}" style="width:38px;height:38px;border-radius:50%;object-fit:cover"></span>
+          <span class="rl">头像</span><span class="rv">更换</span><svg class="rc"><use href="#i-chev-r"/></svg>
+        </div>
+        <div class="row" data-act="name">
+          <span class="ri"><svg><use href="#i-user"/></svg></span>
+          <span class="rl">昵称</span><span class="rv">${esc(p.name)}</span><svg class="rc"><use href="#i-chev-r"/></svg>
+        </div>
+      </div>
+      <div class="group-label">对话</div>
+      <div class="card">
+        <div class="row" data-act="greetrow">
+          <span class="ri"><svg><use href="#i-spark"/></svg></span>
+          <span class="rl">首页问候语</span><span class="rv">${esc(U().greeting || '你好，我能帮什么忙吗？')}</span><svg class="rc"><use href="#i-chev-r"/></svg>
+        </div>
+      </div>`;
+    };
+    open({
+      title: '个性化', body, full: true, after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-act]'); if (!r) return;
+        if (r.dataset.act === 'avatar') pickAvatar();
+        if (r.dataset.act === 'name') editText('昵称', S().profile.name, v => { S().profile.name = v; S().profile.custom = true; saveNow(); refreshProfile(); });
+        if (r.dataset.act === 'greetrow') editText('首页问候语', U().greeting || '你好，我能帮什么忙吗？', v => { U().greeting = v; U().greetingCustom = true; saveNow(); refreshProfile(); });
+      })
+    });
+  }
+
+  function pickAvatar() {
+    const inp = h('input', { type: 'file', accept: 'image/*' });
+    inp.onchange = async () => {
+      const f = inp.files[0]; if (!f) return;
+      const url = await shrinkImage(f, 256, 0.9);
+      S().profile.avatar = url; saveNow(); refreshProfile(); reopen(personalSheet);
+    };
+    inp.click();
+  }
+
+  function editText(title, value, cb) {
+    const body = `<div style="padding:16px">
+      <div class="field" style="background:var(--surface);border:1px solid var(--line);border-radius:12px;height:48px;display:flex;align-items:center;padding:0 12px">
+        <input id="editInput" style="flex:1;border:none;outline:none;background:none;font-size:16px;color:var(--text)" value="${esc(value)}">
+      </div>
+      <button class="go" id="editOk" style="margin-top:14px;width:100%;height:46px;border-radius:23px;background:var(--blue);color:#fff;font-size:16px">保存</button>
+    </div>`;
+    open({
+      title, headClose: true, body, after: (b) => {
+        const inp = $('#editInput');
+        $('#editOk').onclick = () => { const v = inp.value.trim(); if (v) cb(v); back(); };
+      }
+    });
+  }
+
+  /* ---------- account ---------- */
+  function account() {
+    const body = () => {
+      const p = S().profile;
+      return `
+      <div class="card" style="margin-top:8px">
+        <div class="row" data-act="profile" style="min-height:66px">
+          <img src="${p.avatar || avatarDataUri(p.name)}" style="width:44px;height:44px;border-radius:50%;object-fit:cover">
+          <span class="rl" style="font-weight:500">${esc(p.name)}<div style="font-size:12.5px;color:var(--text-3);margin-top:2px">本机账户 · 点头像修改</div></span>
+          <svg class="rc"><use href="#i-chev-r"/></svg>
+        </div>
+      </div>
+      <div class="group-label">账户</div>
+      <div class="card">
+        ${row('i-key', 'API Key', S().apiKey ? '已配置' : '未配置', 'api')}
+        ${row('i-user', '手机号', '未绑定', 'noop')}
+      </div>
+      <div class="card" style="margin-top:14px">
+        ${switchRow('', '未成年人模式', !!S().minor, 'toggle-minor')}
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="row danger" data-act="reset">退出所有设备</div>
+      </div>
+      <div class="row center" style="margin-top:26px;background:none" data-act="wipe">清空本机数据</div>`;
+    };
+    open({
+      title: '账号管理', body, full: true, after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-act]'); if (!r) return;
+        const a = r.dataset.act;
+        if (a === 'profile') return personalSheet();
+        if (a === 'api') return apiSheet();
+        if (a === 'noop') return toast('无需绑定手机号，本机模式');
+        if (a === 'toggle-minor') { S().minor = !S().minor; Store.save(); reopen(account); return; }
+        if (a === 'reset') {
+          confirmSheet('退出所有设备', '将清除本机保存的 API Key，对话记录保留。', () => {
+            S().apiKey = ''; saveNow(); refreshProfile(); closeAll(); toast('已退出'); openSetup();
+          });
+        }
+        if (a === 'wipe') {
+          confirmSheet('清空本机数据', '所有对话、设置与 API Key 都会被删除，且无法恢复。', () => {
+            try { localStorage.removeItem(Store.KEY); } catch (err) { }
+            location.reload();
+          });
+        }
+      })
+    });
+  }
+
+  /* ---------- data ---------- */
+  function dataSheet() {
+    let bytes = 0;
+    try { bytes = new Blob([localStorage.getItem(Store.KEY) || '']).size; } catch (e) { }
+    const body = `
+      <div class="card" style="margin-top:8px">
+        ${row('i-download', '导出全部数据', 'JSON', 'export', { noChev: true })}
+        ${row('i-upload', '导入数据', '', 'import', { noChev: true })}
+      </div>
+      <div class="group-label">存储</div>
+      <div class="card">
+        <div class="row"><span class="ri"><svg><use href="#i-db"/></svg></span><span class="rl">对话数量</span><span class="rv">${Store.data.convs.length}</span></div>
+        <div class="row"><span class="ri"><svg><use href="#i-file"/></svg></span><span class="rl">占用空间</span><span class="rv">${(bytes / 1024).toFixed(1)} KB</span></div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="row danger" data-act="clear">清空全部对话</div>
+      </div>`;
+    open({
+      title: '数据管理', body, full: true, after: (b) => b.addEventListener('click', e => {
+        const r = e.target.closest('[data-act]'); if (!r) return;
+        const a = r.dataset.act;
+        if (a === 'export') {
+          const blob = new Blob([JSON.stringify({ v: 1, exportedAt: Date.now(), convs: Store.data.convs, settings: S() }, null, 2)], { type: 'application/json' });
+          downloadBlob(blob, 'deepseek-backup-' + new Date().toISOString().slice(0, 10) + '.json');
+          toast('已导出');
+        }
+        if (a === 'import') importData();
+        if (a === 'clear') confirmSheet('清空全部对话', '所有历史对话会被删除，设置保留。', () => {
+          Store.data.convs = []; Store.data.curId = null; saveNow(); closeAll(); Chat.renderAll(); toast('已清空');
+        });
+      })
+    });
+  }
+
+  function importData() {
+    const inp = h('input', { type: 'file', accept: '.json,application/json' });
+    inp.onchange = () => {
+      const f = inp.files[0]; if (!f) return;
+      const rd = new FileReader();
+      rd.onload = () => {
+        try {
+          const j = JSON.parse(rd.result);
+          let convs = j.convs || j;
+          if (!Array.isArray(convs)) throw new Error('格式不对');
+          const have = new Set(Store.data.convs.map(c => c.id));
+          convs = convs.filter(c => c && !have.has(c.id)).map(c => {
+            const nc = Object.assign({}, c);
+            nc.id = uid();
+            nc.messages = (c.messages || []).map(m => Object.assign({}, m, { id: uid() }));
+            return nc;
+          });
+          Store.data.convs = convs.concat(Store.data.convs);
+          if (j.settings && j.settings.apiKey) S().apiKey = j.settings.apiKey;
+          saveNow(); closeAll(); Chat.renderAll(); toast('已导入 ' + convs.length + ' 个对话');
+        } catch (e) { toast('导入失败：文件格式不正确'); }
+      };
+      rd.readAsText(f);
+    };
+    inp.click();
+  }
+
+  /* ---------- api settings ---------- */
+  function apiSheet() {
+    const s = S();
+    const body = `
+      <div class="group-label">凭证</div>
+      <div class="card">
+        <div class="row" data-act="key">
+          <span class="ri"><svg><use href="#i-key"/></svg></span>
+          <span class="rl">API Key</span>
+          <span class="rv">${s.apiKey ? esc(maskKey(s.apiKey)) : '未填写'}</span>
+        </div>
+        <div class="row" data-act="base">
+          <span class="ri"><svg><use href="#i-lang"/></svg></span>
+          <span class="rl">Base URL</span>
+          <span class="rv">${esc(s.baseUrl.replace(/^https?:\/\//, ''))}</span>
+        </div>
+      </div>
+      <div class="group-label">模型</div>
+      <div class="card">
+        <div class="row" data-act="model-flash">
+          <span class="ri"><svg><use href="#i-spark"/></svg></span>
+          <span class="rl">deepseek-flash<div style="font-size:12.5px;color:var(--text-3);margin-top:2px">支持识图、联网、文件</div></span>
+          ${s.model === 'deepseek-flash' ? '<span class="ri" style="color:var(--blue)"><svg><use href="#i-check"/></svg></span>' : ''}
+        </div>
+        <div class="row" data-act="model-pro">
+          <span class="ri"><svg><use href="#i-spark"/></svg></span>
+          <span class="rl">deepseek-v4-pro<div style="font-size:12.5px;color:var(--text-3);margin-top:2px">纯文本推理，价格更高</div></span>
+          ${s.model === 'deepseek-v4-pro' ? '<span class="ri" style="color:var(--blue)"><svg><use href="#i-check"/></svg></span>' : ''}
+        </div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <div class="row" data-act="test"><span class="ri"><svg><use href="#i-check"/></svg></span><span class="rl">测试连接</span><span class="rv" id="testRes"></span></div>
+      </div>
+      <div class="bill-foot">Key 只保存在本机浏览器；请求直连 https://api.deepseek.com，不经过任何第三方服务器。</div>`;
+    open({
+      title: 'API 设置', body, full: true, after: (b) => b.addEventListener('click', async e => {
+        const r = e.target.closest('[data-act]'); if (!r) return;
+        const a = r.dataset.act;
+        if (a === 'key') editText('API Key', S().apiKey, v => { S().apiKey = v.trim(); saveNow(); });
+        if (a === 'base') editText('Base URL', S().baseUrl, v => { S().baseUrl = v.trim().replace(/\/+$/, ''); saveNow(); });
+        if (a === 'model-flash') { S().model = 'deepseek-flash'; saveNow(); reopen(apiSheet); }
+        if (a === 'model-pro') { S().model = 'deepseek-v4-pro'; saveNow(); reopen(apiSheet); }
+        if (a === 'test') {
+          const el = $('#testRes');
+          el.textContent = '测试中…';
+          try { await API.checkKey(); el.textContent = '连接正常'; el.style.color = 'var(--blue)'; }
+          catch (err) { el.textContent = err.message; el.style.color = 'var(--danger)'; }
+        }
+      })
+    });
+  }
+  function maskKey(k) { return k.length > 12 ? k.slice(0, 5) + '••••' + k.slice(-4) : k; }
+
+  /* ---------- billing ---------- */
+  function billing(msg) {
+    const c = costOf(msg.usage, msg.model);
+    if (!c) return toast('这一轮没有用量数据');
+    const u = c.usage;
+    const ctxPct = Math.min(100, (u.input / 1000000) * 100);
+    const line = (label, tokens, unit, amount) =>
+      `<div class="bill-line"><span class="bl">${label}</span><span class="bn">${tokens}</span><span class="bu">${unit}</span><span class="ba">${amount}</span></div>`;
+    const body = `
+      <div class="bill-card">
+        <div class="bill-top"><div class="l">本轮消耗额度</div><div class="r">¥${fmtCost(c.total)}</div></div>
+        <div class="bill-sub">按「${c.peak ? '高峰时段' : '空闲时段'}」价格估算 · ${esc(c.model)}</div>
+        <div class="bill-sec">输入</div>
+        ${line('缓存命中', u.hit.toLocaleString() + ' tokens', '¥' + c.price.hit + ' / 百万', c.cHit.toFixed(6))}
+        ${line('缓存未命中', u.miss.toLocaleString() + ' tokens', '¥' + c.price.miss + ' / 百万', c.cMiss.toFixed(6))}
+        <div class="bill-sec">输出</div>
+        ${line('生成', u.out.toLocaleString() + ' tokens', '¥' + c.price.out + ' / 百万', c.cOut.toFixed(6))}
+        <div class="bill-total"><span class="bl">合计</span><span class="bn">${u.total.toLocaleString()} tokens</span><span class="ba">¥${fmtCost(c.total)}</span></div>
+        ${u.tool && (u.tool.tool_search || u.tool.tool_fetch) ? `<div class="bill-sub" style="margin-top:10px">联网搜索 ${u.tool.tool_search || 0} 次 · 网页抓取 ${u.tool.tool_fetch || 0} 次，服务端工具不计费</div>` : ''}
+      </div>
+      <div class="bill-card" style="padding-top:16px">
+        <div style="font-size:13px;color:var(--text-2);margin-bottom:8px">上下文已占用 ${ctxPct.toFixed(1)}%</div>
+        <div class="bill-bar"><i style="width:${Math.max(1.5, ctxPct)}%"></i></div>
+        <div style="font-size:12px;color:var(--text-3);padding-bottom:12px">模型上下文 1M tokens，接近上限时可新建对话继续。</div>
+      </div>
+      <div class="bill-foot">估算基于本机时间与官方价目表，实际扣费以开放平台账单为准。</div>`;
+    open({ title: '本轮消耗额度', body });
+  }
+
+  /* ---------- sources ---------- */
+  function sourcesSheet(msg) {
+    const list = collectAllSources(msg);
+    if (!list.length) return toast('本轮没有引用来源');
+    const body = list.map((s, i) => `<div class="src-item" data-url="${esc(s.url)}">
+      ${s.icon ? `<img class="fav" src="${esc(s.icon)}" onerror="this.style.visibility='hidden'">` : '<span class="fav"></span>'}
+      <div style="flex:1;min-width:0"><div class="st">${esc(s.title || s.url)}</div><div class="su">${esc(hostOf(s.url))}</div></div>
+    </div>`).join('');
+    open({
+      title: '参考来源', body, after: (b) => b.addEventListener('click', e => {
+        const it = e.target.closest('[data-url]');
+        if (it) window.open(it.dataset.url, '_blank', 'noopener');
+      })
+    });
+  }
+  function collectAllSources(m) {
+    const all = [];
+    (m.steps || []).forEach(st => (st.calls || []).forEach(c => {
+      (c.sources || []).forEach(s => all.push({ url: s.url, title: s.title, icon: s.site_icon || '' }));
+    }));
+    const seen = new Set(); const out = [];
+    all.forEach(s => { if (s.url && !seen.has(s.url)) { seen.add(s.url); out.push(s); } });
+    return out;
+  }
+  function hostOf(u) { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return u; } }
+
+  /* ---------- plus sheet ---------- */
+  function plus() {
+    const recents = (U().recentImages || []).slice(0, 8);
+    const body = `
+      <div class="plus-wrap">
+        ${recents.length ? `<div class="recent-strip">${recents.map(r => `<img class="recent-thumb" src="${r}" data-recent="${r}">`).join('')}</div>` : ''}
+        <div class="plus-grid">
+          <button class="plus-card" data-p="camera"><svg><use href="#i-camera"/></svg>拍照</button>
+          <button class="plus-card" data-p="gallery"><svg><use href="#i-gallery"/></svg>相册</button>
+          <button class="plus-card" data-p="file"><svg><use href="#i-file"/></svg>文件</button>
+        </div>
+      </div>`;
+    open({ head: false, cls: 'plus-sheet', body });
+    $('#sheet').onclick = (e) => {
+      const rec = e.target.closest('[data-recent]');
+      if (rec) { closeAll(); addImage(rec.dataset.recent, '图片'); return; }
+      const b = e.target.closest('[data-p]'); if (!b) return;
+      const k = b.dataset.p;
+      closeAll();
+      if (k === 'camera') pickFile('camera');
+      if (k === 'gallery') pickFile('gallery');
+      if (k === 'file') pickFile('file');
+    };
+  }
+
+  function pickFile(mode) {
+    const inp = h('input', { type: 'file' });
+    if (mode === 'file') inp.accept = '.pdf,.doc,.docx,.ppt,.pptx,.xlsx,.xls,.txt,.md,.csv,.json,.epub,.mobi,image/*';
+    else inp.accept = 'image/*';
+    if (mode === 'camera') inp.setAttribute('capture', 'environment');
+    inp.onchange = () => { const f = inp.files[0]; if (f) handlePick(f); };
+    inp.click();
+  }
+
+  async function handlePick(f) {
+    if (/^image\//.test(f.type)) {
+      const url = await shrinkImage(f, 1400, 0.82);
+      addImage(url, f.name);
+      return;
+    }
+    if (f.size > 100 * 1024 * 1024) return toast('文件超过 100MB，无法上传');
+    const att = { kind: 'file', name: f.name, uploading: true };
+    Chat.draftAtts().push(att);
+    Chat.renderAtts(); Chat.updateSendBtn();
+    try {
+      const r = await API.uploadFile(f);
+      att.fileId = r.id; att.uploading = false; att.purpose = r.purpose;
+      Chat.renderAtts(); Chat.updateSendBtn(); toast('文件已解析');
+    } catch (e) {
+      const i = Chat.draftAtts().indexOf(att);
+      if (i > -1) Chat.draftAtts().splice(i, 1);
+      Chat.renderAtts(); Chat.updateSendBtn();
+      toast(e.message || '上传失败');
+    }
+  }
+
+  function addImage(dataUrl, name) {
+    Chat.draftAtts().push({ kind: 'image', name: name || '图片', dataUrl });
+    U().recentImages = [dataUrl].concat(U().recentImages || []).slice(0, 12);
+    Chat.renderAtts(); Chat.updateSendBtn(); saveNow();
+  }
+
+  /* ---------- share ---------- */
+  function loadWhale() {
+    return new Promise(res => {
+      if (!window.__WHALE__) return res(null);
+      const im = new Image();
+      im.onload = () => res(im);
+      im.onerror = () => res(null);
+      im.src = window.__WHALE__;
+    });
+  }
+
+  async function share(msg) {
+    const conv = curConv();
+    const idx = conv.messages.findIndex(m => m.id === msg.id);
+    let q = '';
+    for (let i = idx - 1; i >= 0; i--) { if (conv.messages[i].role === 'user') { q = conv.messages[i].content; break; } }
+    const whale = await loadWhale();
+    const canvas = buildShareCanvas(q, MD.plain(msg.content), whale);
+    const body = `<div class="share-preview"></div>
+      <div class="share-bar">
+        <button data-s="copy">复制文字</button>
+        <button data-s="save">保存图片</button>
+        <button class="primary" data-s="sys">分享</button>
+      </div>`;
+    open({ title: '分享', body, headClose: true, after: (b) => {
+      $('.share-preview').appendChild(canvas);
+      canvas.style.width = '100%';
+      b.addEventListener('click', async e => {
+        const btn = e.target.closest('[data-s]'); if (!btn) return;
+        const k = btn.dataset.s;
+        if (k === 'copy') copyText((q ? q + '\n\n' : '') + MD.plain(msg.content));
+        if (k === 'save') canvas.toBlob(bl => downloadBlob(bl, 'deepseek-' + Date.now() + '.png'), 'image/png');
+        if (k === 'sys') {
+          canvas.toBlob(async bl => {
+            const file = new File([bl], 'deepseek.png', { type: 'image/png' });
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+              try { await navigator.share({ files: [file], title: 'DeepSeek' }); } catch (err) { }
+            } else {
+              downloadBlob(bl, 'deepseek.png');
+            }
+          }, 'image/png');
+        }
+      });
+    } });
+  }
+
+  function buildShareCanvas(q, a, whale) {
+    const W = 750, pad = 54;
+    const c = document.createElement('canvas');
+    const ratio = 2;
+    c.width = W * ratio;
+    const ctx = c.getContext('2d');
+    ctx.scale(ratio, ratio);
+    const font = '-apple-system,"PingFang SC","Microsoft YaHei",sans-serif';
+    const maxW = W - pad * 2;
+    ctx.font = '34px ' + font;
+    const qLines = q ? wrapText(ctx, q, maxW) : [];
+    ctx.font = '32px ' + font;
+    let aLines = wrapText(ctx, a, maxW);
+    const lineH = 54;
+    const MAX_H = 15000;
+    const maxLines = Math.max(6, Math.floor((MAX_H - 400 - (q ? qLines.length * 46 : 0)) / lineH));
+    if (aLines.length > maxLines) { aLines = aLines.slice(0, maxLines); aLines.push('\u2026\uff08\u5185\u5bb9\u8fc7\u957f\uff0c\u5df2\u622a\u65ad\uff09'); }
+    const qH = q ? qLines.length * 46 + 40 : 0;
+    const H = 190 + qH + aLines.length * lineH + 130;
+    c.height = H * ratio;
+    ctx.scale(1, 1);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    // bg
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0, 0, W, H);
+    // header
+    if (whale) {
+      const wh = 34, ww = wh * (whale.width / whale.height);
+      ctx.drawImage(whale, pad, 50, ww, wh);
+    } else {
+      ctx.fillStyle = '#597AEB';
+      roundRect(ctx, pad, 52, 44, 34, 12); ctx.fill();
+    }
+    ctx.fillStyle = '#0F0F0F';
+    ctx.font = '600 30px ' + font;
+    ctx.fillText('DeepSeek', pad + 62, 78);
+    ctx.fillStyle = '#9B9B9B';
+    ctx.font = '24px ' + font;
+    ctx.fillText(new Date().toLocaleDateString('zh-CN'), W - pad - 90, 78);
+
+    let y = 140;
+    if (q) {
+      ctx.fillStyle = '#85868C'; ctx.font = '24px ' + font;
+      ctx.fillText('提问', pad, y); y += 34;
+      ctx.fillStyle = '#0F0F0F'; ctx.font = '34px ' + font;
+      qLines.forEach(l => { ctx.fillText(l, pad, y + 34); y += 46; });
+      y += 26;
+    }
+    ctx.fillStyle = '#85868C'; ctx.font = '24px ' + font;
+    ctx.fillText('回答', pad, y); y += 34;
+    ctx.fillStyle = '#1A1A1A'; ctx.font = '32px ' + font;
+    aLines.forEach(l => { ctx.fillText(l, pad, y + 36); y += lineH; });
+
+    ctx.strokeStyle = '#EDEDED'; ctx.beginPath(); ctx.moveTo(pad, H - 64); ctx.lineTo(W - pad, H - 64); ctx.stroke();
+    ctx.fillStyle = '#B0B0B0'; ctx.font = '22px ' + font;
+    ctx.fillText('由 DeepSeek 生成 · 仅供参考', pad, H - 28);
+    ctx.fillStyle = '#597AEB';
+    ctx.fillText('deepseek.com', W - pad - 150, H - 28);
+    return c;
+  }
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+  }
+  function wrapText(ctx, text, maxW) {
+    const out = [];
+    String(text).split('\n').forEach(para => {
+      if (!para.trim()) { out.push(''); return; }
+      const NO_HEAD = '，。、；：？！）】》」』%';
+      let line = '';
+      for (const ch of para) {
+        const test = line + ch;
+        if (ctx.measureText(test).width > maxW && line) {
+          if (NO_HEAD.indexOf(ch) > -1) { line = test; continue; }
+          out.push(line); line = ch;
+        } else line = test;
+      }
+      if (line) out.push(line);
+    });
+    return out.length ? out : [''];
+  }
+
+  /* ---------- confirm / action sheet ---------- */
+  function confirmSheet(title, desc, onOk) {
+    const body = `<div style="padding:4px 18px 8px"><div style="font-size:14.5px;color:var(--text-2);line-height:1.65">${esc(desc)}</div></div>
+      <div class="card" style="margin-top:14px"><div class="row center" data-ok="1" style="color:var(--danger)">${esc(title)}</div>
+      <div class="row center" data-cancel="1" style="background:none;color:var(--text-2)">取消</div></div>`;
+    open({
+      head: false, cls: 'act-sheet', body, after: (b) => b.addEventListener('click', e => {
+        if (e.target.closest('[data-ok]')) { closeAll(); onOk(); }
+        else if (e.target.closest('[data-cancel]')) closeAll();
+      })
+    });
+  }
+
+  function actionSheet(items) {
+    const body = `<div class="act-group">${items.map((it, i) => `<div class="act-item${it.danger ? ' danger' : ''}" data-i="${i}">${esc(it.label)}</div>`).join('')}</div>
+      <div class="act-cancel" data-cancel="1">取消</div>`;
+    open({ head: false, cls: 'act-sheet', body, after: (b) => b.addEventListener('click', e => {
+      const it = e.target.closest('[data-i]');
+      if (e.target.closest('[data-cancel]')) return closeAll();
+      if (it) { closeAll(); items[+it.dataset.i].onClick(); }
+    }) });
+  }
+
+  /* ---------- misc pages ---------- */
+  function termsSheet() {
+    open({
+      title: '服务协议', full: true, body: `<div style="padding:6px 22px 20px;font-size:14px;line-height:1.8;color:var(--text-2)">
+      <p>本客户端是一个第三方界面，通过 DeepSeek 官方开放平台 API 提供对话服务。</p>
+      <p>1. 你的 API Key、对话内容、上传文件均只保存在本机浏览器，不经过任何中转服务器。</p>
+      <p>2. 模型输出内容由 DeepSeek 模型生成，可能存在错误，请自行判断。</p>
+      <p>3. 使用本客户端产生的 API 费用由你的 DeepSeek 开放平台账户承担。</p>
+      <p>4. 请遵守 DeepSeek 开放平台的服务条款与内容规范。</p></div>`
+    });
+  }
+  function helpSheet() {
+    open({
+      title: '帮助与反馈', full: true, body: `<div class="card" style="margin-top:8px">
+        <div class="row" data-act="maill"><span class="ri"><svg><use href="#i-doc"/></svg></span><span class="rl">API 文档</span><svg class="rc"><use href="#i-chev-r"/></svg></div>
+        <div class="row" data-act="keypage"><span class="ri"><svg><use href="#i-key"/></svg></span><span class="rl">管理 API Key</span><svg class="rc"><use href="#i-chev-r"/></svg></div>
+      </div>
+      <div class="bill-foot">遇到余额不足、密钥无效等问题，请先在设置 → API 设置里点“测试连接”。</div>`,
+      after: (b) => b.addEventListener('click', e => {
+        if (e.target.closest('[data-act="maill"]')) window.open('https://api-docs.deepseek.com/zh-cn/', '_blank', 'noopener');
+        if (e.target.closest('[data-act="keypage"]')) window.open('https://platform.deepseek.com/api_keys', '_blank', 'noopener');
+      })
+    });
+  }
+
+  return {
+    settings, account, dataSheet, apiSheet, billing, sourcesSheet,
+    plus, share, actionSheet, confirmSheet, closeAll, open, reopen,
+    handlePick, pickFile, addImage, collectAllSources
+  };
+})();
+
+/* ---------- image utils ---------- */
+function shrinkImage(file, maxSide, quality) {
+  return new Promise((resolve, reject) => {
+    const fr = new FileReader();
+    fr.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        let w = img.width, h = img.height;
+        const m = Math.max(w, h);
+        if (m > maxSide) { const k = maxSide / m; w = Math.round(w * k); h = Math.round(h * k); }
+        const c = document.createElement('canvas');
+        c.width = w; c.height = h;
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);
+        ctx.drawImage(img, 0, 0, w, h);
+        resolve(c.toDataURL('image/jpeg', quality || 0.82));
+      };
+      img.onerror = () => reject(new Error('图片读取失败'));
+      img.src = fr.result;
+    };
+    fr.onerror = () => reject(new Error('图片读取失败'));
+    fr.readAsDataURL(file);
+  });
+}
+
+
+/* ==== js/50-boot.js ==== */
+/* ================= boot & events ================= */
+const GREETINGS = ['你好，我能帮什么忙吗？', '你好，让我们开始聊天吧', '今天想聊点什么？', '有什么我可以帮你的？'];
+function pickGreeting() {
+  const list = GREETINGS.filter(g => g !== U().greeting);
+  return list[Math.floor(Math.random() * list.length)] || GREETINGS[0];
+}
+
+(function boot() {
+  try {
+  Store.load();
+  applyTheme();
+  applyFont();
+  if (window.matchMedia) {
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const fn = () => { if (S().theme === 'system') applyTheme(); };
+    if (mq.addEventListener) mq.addEventListener('change', fn); else if (mq.addListener) mq.addListener(fn);
+  }
+
+  /* whale assets */
+  const whale = document.body.dataset.whale || (window.__WHALE__ || '');
+  if (whale) {
+    $('#emptyWhale').src = whale;
+    $('#setupWhale').src = whale;
+  }
+
+  const safe = (name, fn) => { try { fn(); } catch (e) { console.error('[init:' + name + ']', e); } };
+  safe('profile', refreshProfile);
+  safe('composer', bindComposer);
+  safe('topbar', bindTopbar);
+  safe('sidebar', bindSidebar);
+  safe('messages', bindMessages);
+  safe('voice', bindVoice);
+  safe('misc', bindMisc);
+
+  // restore last conversation or create one
+  if (!curConv() && Store.data.convs.length) Store.data.curId = Store.data.convs[0].id;
+  Chat.renderAll();
+  if (window.__loadDraft) window.__loadDraft();
+  Chat.renderAtts();
+  Chat.updateSendBtn();
+
+  if (!S().apiKey) openSetup();
+  else $('#setup').hidden = true;
+
+  if (location.hash === '#new') { /* reserved */ }
+  } catch (err) {
+    console.error('[boot]', err);
+    try { toast('初始化异常：' + (err && err.message || err)); } catch (e) { }
+  }
+})();
+
+/* ---------- profile ---------- */
+function refreshProfile() {
+  const p = S().profile;
+  const av = p.avatar || avatarDataUri(p.name);
+  $('#sbAvatar').src = av;
+  $('#sbName').textContent = p.name || '本机用户';
+  if (!U().greeting) U().greeting = GREETINGS[0];
+  const t = document.querySelector('.empty-title');
+  if (t) t.textContent = U().greeting;
+}
+
+/* ---------- setup ---------- */
+function openSetup() {
+  const el = $('#setup');
+  el.hidden = false;
+  const inp = $('#setupKey');
+  inp.value = '';
+  $('#setupGo').disabled = true;
+  $('#setupErr').textContent = '';
+  setTimeout(() => inp.focus(), 260);
+}
+(function () {
+  const key = () => $('#setupKey');
+  document.addEventListener('input', (e) => {
+    if (e.target && e.target.id === 'setupKey') {
+      $('#setupGo').disabled = e.target.value.trim().length < 10;
+    }
+  });
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('#setupEye')) {
+      const i = key();
+      i.type = i.type === 'password' ? 'text' : 'password';
+      return;
+    }
+    if (e.target.closest('#setupGo')) {
+      const v = key().value.trim();
+      if (v.length < 10) return;
+      S().apiKey = v; saveNow();
+      $(`#setup`).hidden = true;
+      refreshProfile();
+      toast('已接入，开始对话吧');
+      $('#input').focus();
+    }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && document.activeElement && document.activeElement.id === 'setupKey') {
+      e.preventDefault();
+      $('#setupGo').click();
+    }
+  });
+})();
+
+/* ---------- composer ---------- */
+function bindComposer() {
+  const input = $('#input');
+  const box = $('#composer');
+
+  const resize = () => {
+    input.style.height = 'auto';
+    input.style.height = Math.min(150, Math.max(25, input.scrollHeight)) + 'px';
+  };
+  let draftTimer = 0;
+  const draftKey = () => (Store.data.curId || '_new');
+  const saveDraft = () => {
+    U().drafts = U().drafts || {};
+    const v = input.value;
+    if (v) U().drafts[draftKey()] = v; else delete U().drafts[draftKey()];
+    Store.save();
+  };
+  input.addEventListener('input', () => {
+    resize(); Chat.updateSendBtn();
+    clearTimeout(draftTimer); draftTimer = setTimeout(saveDraft, 350);
+  });
+  input.addEventListener('blur', saveDraft);
+  window.__loadDraft = () => {
+    const v = (U().drafts || {})[draftKey()] || '';
+    input.value = v;
+    resize();
+  };
+  input.addEventListener('focus', () => box.classList.add('focus'));
+  input.addEventListener('blur', () => box.classList.remove('focus'));
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey && !e.isComposing && window.innerWidth > 640) {
+      e.preventDefault();
+      doSend();
+    }
+  });
+
+  $('#btnSend').addEventListener('click', () => {
+    if (Chat.isStreaming()) { Chat.stop(); return; }
+    doSend();
+  });
+
+  $('#chipThink').addEventListener('click', () => {
+    const d = S().draft = S().draft || { think: true, search: false };
+    d.think = !d.think; Store.save(); Chat.updateSendBtn();
+  });
+  $('#chipSearch').addEventListener('click', () => {
+    const d = S().draft = S().draft || { think: true, search: false };
+    d.search = !d.search; Store.save(); Chat.updateSendBtn();
+  });
+  $('#btnPlus').addEventListener('click', () => Nav.plus());
+
+  $('#attachPreview').addEventListener('click', (e) => {
+    const rm = e.target.closest('.rm');
+    if (!rm) return;
+    const i = +rm.dataset.i;
+    Chat.draftAtts().splice(i, 1);
+    Chat.renderAtts(); Chat.updateSendBtn();
+  });
+}
+
+function doSend() {
+  const input = $('#input');
+  const text = input.value;
+  if (!text.trim() && !Chat.draftAtts().length) return;
+  input.value = '';
+  input.style.height = 'auto';
+  U().drafts = U().drafts || {};
+  delete U().drafts[Store.data.curId || '_new'];
+  Store.save();
+  Chat.updateSendBtn();
+  Chat.send(text);
+}
+
+/* ---------- topbar ---------- */
+function bindTopbar() {
+  $('#btnSidebar').addEventListener('click', openSidebar);
+  $('#btnNewChat').addEventListener('click', () => {
+    if (Chat.isStreaming()) Chat.stop();
+    if (!U().greetingCustom) { U().greeting = pickGreeting(); refreshProfile(); }
+    const inp = $('#input');
+    if (inp && inp.value) { U().drafts = U().drafts || {}; U().drafts[Store.data.curId || '_new'] = inp.value; }
+    Store.data.curId = null;
+    saveNow();
+    renderSidebar();
+    Chat.renderAll();
+    if (window.__loadDraft) window.__loadDraft();
+    Chat.updateSendBtn();
+    $('#input').focus();
+  });
+  $('#btnAutoRead').addEventListener('click', () => {
+    S().autoRead = !S().autoRead; Store.save(); Chat.updateSendBtn();
+    toast(S().autoRead ? '已开启自动朗读' : '已关闭自动朗读');
+    if (Nav && $('#sheetRoot') && !$('#sheetRoot').hidden) { }
+  });
+}
+
+/* ---------- sidebar ---------- */
+function openSidebar() {
+  renderSidebar();
+  $('#scrim').hidden = false;
+  $('#sidebar').classList.add('open');
+}
+function closeSidebar() {
+  $('#sidebar').classList.remove('open');
+  setTimeout(() => { if (!$('#sidebar').classList.contains('open')) $('#scrim').hidden = true; }, 300);
+}
+
+function renderSidebar() {
+  const q = ($('#convSearch').value || '').trim().toLowerCase();
+  const list = $('#convList');
+  list.innerHTML = '';
+  let convs = Store.data.convs.slice().sort((a, b) => (b.pinned ? 1 : 0) - (a.pinned ? 1 : 0) || b.updatedAt - a.updatedAt);
+  if (q) {
+    convs = convs.filter(c => {
+      if ((c.title || '').toLowerCase().indexOf(q) > -1) return true;
+      return (c.messages || []).some(m => m.role === 'user' && (m.content || '').toLowerCase().indexOf(q) > -1);
+    });
+  }
+  if (!convs.length) {
+    list.innerHTML = `<div class="sb-empty">${q ? '没有找到相关对话' : '还没有对话，去问点什么吧'}</div>`;
+    return;
+  }
+  let lastKey = '';
+  if (!q) {
+    const top = h('div', 'sb-sec');
+    top.innerHTML = '<span>置顶</span><svg class="mg"><use href="#i-tune"/></svg>';
+    list.appendChild(top);
+    lastKey = '置顶';
+  }
+  convs.forEach(c => {
+    const k = c.pinned ? '置顶' : dayKey(c.updatedAt);
+    if (k !== lastKey) {
+      lastKey = k;
+      const sec = h('div', 'sb-sec', k);
+      if (k === '置顶') sec.innerHTML = `<span>置顶</span>` + `<svg class="mg"><use href="#i-pin"/></svg>`;
+      list.appendChild(sec);
+    }
+    const item = h('div', 'sb-item' + (c.id === Store.data.curId ? ' active' : ''));
+    item.dataset.id = c.id;
+    item.innerHTML = `<span class="t">${esc(c.title || '新对话')}</span><span class="dots"><svg width="18" height="18"><use href="#i-dots"/></svg></span>`;
+    list.appendChild(item);
+  });
+}
+
+function bindSidebar() {
+  $('#scrim').addEventListener('click', closeSidebar);
+  $('#convSearch').addEventListener('input', renderSidebar);
+  $('#sbUser').addEventListener('click', () => { closeSidebar(); setTimeout(() => Nav.settings(), 200); });
+  $('#convList').addEventListener('click', (e) => {
+    if (Date.now() - lpSide < 600) { e.preventDefault(); e.stopPropagation(); return; }
+    const it = e.target.closest('.sb-item');
+    if (!it) return;
+    if (Chat.isStreaming()) Chat.stop();
+    const inp = $('#input');
+    if (inp && inp.value) { U().drafts = U().drafts || {}; U().drafts[Store.data.curId || '_new'] = inp.value; }
+    Store.data.curId = it.dataset.id;
+    saveNow(); closeSidebar(); Chat.renderAll();
+    if (window.__loadDraft) window.__loadDraft();
+    Chat.updateSendBtn();
+  });
+  let lp = 0;
+  let lpSide = 0;
+  $('#convList').addEventListener('pointerdown', (e) => {
+    const it = e.target.closest('.sb-item');
+    if (!it) return;
+    lp = setTimeout(() => {
+      lpSide = Date.now();
+      const c = convById(it.dataset.id);
+      if (!c) return;
+      Nav.actionSheet([
+        { label: c.pinned ? '取消置顶' : '置顶对话', onClick: () => { c.pinned = !c.pinned; saveNow(); renderSidebar(); } },
+        { label: '重命名', onClick: () => renameConv(c) },
+        { label: '删除对话', danger: true, onClick: () => Nav.confirmSheet('删除对话', '「' + (c.title || '新对话') + '」将被永久删除。', () => { deleteConv(c.id); renderSidebar(); Chat.renderAll(); }) }
+      ]);
+    }, 480);
+  });
+  ['pointerup', 'pointermove', 'pointercancel'].forEach(ev => $('#convList').addEventListener(ev, () => clearTimeout(lp)));
+}
+
+function renameConv(c) {
+  const body = `<div style="padding:16px 16px 4px">
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:12px;height:48px;display:flex;align-items:center;padding:0 12px">
+      <input id="rnInput" value="${esc(c.title || '')}" style="flex:1;border:none;outline:none;background:none;font-size:16px;color:var(--text)">
+    </div>
+    <button id="rnOk" style="margin-top:14px;width:100%;height:46px;border-radius:23px;background:var(--blue);color:#fff;font-size:16px">保存</button>
+  </div>`;
+  Nav.open({ title: '重命名', headClose: true, cls: 'act-sheet', body, after: () => {
+    $('#rnOk').onclick = () => {
+      const v = $('#rnInput').value.trim();
+      if (v) { c.title = v.slice(0, 40); saveNow(); renderSidebar(); Chat.renderAll(); }
+      Nav.closeAll();
+    };
+  } });
+}
+
+/* ---------- messages ---------- */
+function bindMessages() {
+  const box = $('#messages');
+
+  box.addEventListener('click', async (e) => {
+    if (Date.now() - lpMsg < 600) { e.preventDefault(); e.stopPropagation(); return; }
+    const cite = e.target.closest('.cite');
+    if (cite) {
+      const msgEl = cite.closest('.msg');
+      const m = findMsg(msgEl && msgEl.dataset.id);
+      if (m && m.annotations && m.annotations[+cite.dataset.i]) {
+        const a = m.annotations[+cite.dataset.i];
+        const url = a.url || (a.url_citation && a.url_citation.url);
+        if (url) window.open(url, '_blank', 'noopener');
+      }
+      return;
+    }
+    const btn = e.target.closest('[data-act]');
+    if (!btn) return;
+    const msgEl = btn.closest('.msg');
+    const m = findMsg(msgEl && msgEl.dataset.id);
+    if (!m) return;
+    const act = btn.dataset.act;
+    if (act === 'toggle-think') {
+      m.thinkOpen = !m.thinkOpen;
+      const t = btn.closest('.think');
+      t.classList.toggle('open', m.thinkOpen);
+      return;
+    }
+    if (act === 'copy') return copyText(m.content || '');
+    if (act === 'like' || act === 'dislike') {
+      const on = btn.classList.contains('on');
+      const sib = btn.parentElement.querySelectorAll('[data-act="like"],[data-act="dislike"]');
+      sib.forEach(b => b.classList.remove('on'));
+      if (!on) btn.classList.add('on');
+      return;
+    }
+    if (act === 'read') return Chat.readAloud(m);
+    if (act === 'share') return Nav.share(m);
+    if (act === 'bill') return Nav.billing(m);
+    if (act === 'regen' || act === 'retry') return Chat.regenerate(m.id);
+    if (act === 'apiset') return Nav.apiSheet();
+    if (act === 'sources') return Nav.sourcesSheet(m);
+  });
+
+  // copy buttons in code blocks
+  box.addEventListener('click', (e) => {
+    const b = e.target.closest('.copy-code');
+    if (!b) return;
+    const pre = b.closest('.code-wrap').querySelector('pre');
+    copyText(pre ? pre.textContent : '');
+  });
+
+  // long press user bubble
+  let lp = 0;
+  let lpMsg = 0;
+  let lpAi = 0;
+  box.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse') return;
+    const t = e.target.closest('.msg.ai');
+    if (!t) return;
+    lpAi = setTimeout(() => {
+      lpMsg = Date.now();
+      const m = findMsg(t.dataset.id);
+      if (!m || m.streaming) return;
+      Nav.actionSheet([
+        { label: '复制', onClick: () => copyText(m.content || '') },
+        { label: '重新生成', onClick: () => Chat.regenerate(m.id) },
+        { label: '朗读', onClick: () => Chat.readAloud(m) },
+        { label: '分享', onClick: () => Nav.share(m) }
+      ]);
+    }, 520);
+  });
+  ['pointerup', 'pointermove', 'pointercancel'].forEach(ev => box.addEventListener(ev, () => clearTimeout(lpAi)));
+  box.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse') return;
+    const b = e.target.closest('.msg.user .bubble');
+    if (!b) return;
+    lp = setTimeout(() => {
+      lpMsg = Date.now();
+      const msgEl = b.closest('.msg');
+      const m = findMsg(msgEl.dataset.id);
+      if (!m) return;
+      Nav.actionSheet([
+        { label: '复制', onClick: () => copyText(m.content || '') },
+        { label: '编辑', onClick: () => editUserMsg(m) },
+        { label: '删除', danger: true, onClick: () => {
+          const c = curConv(); const i = c.messages.indexOf(m);
+          c.messages.splice(i); saveNow(); Chat.renderAll();
+        } }
+      ]);
+    }, 480);
+  });
+  ['pointerup', 'pointermove', 'pointercancel'].forEach(ev => box.addEventListener(ev, () => clearTimeout(lp)));
+
+  const sc = $('#scroll');
+  const toBottom = $('#toBottom');
+  const syncBottomBtn = () => {
+    const far = sc.scrollHeight - sc.scrollTop - sc.clientHeight > 260;
+    toBottom.hidden = !far;
+  };
+  sc.addEventListener('scroll', () => {
+    const t = $('#convTitle');
+    const c = curConv();
+    t.classList.toggle('show', !!(c && c.title) && (sc.scrollTop > 26 || c.messages.length > 0));
+    syncBottomBtn();
+  });
+  toBottom.addEventListener('click', () => { sc.scrollTo({ top: sc.scrollHeight, behavior: 'smooth' }); });
+  window.__syncBottomBtn = syncBottomBtn;
+}
+
+function findMsg(id) {
+  const c = curConv();
+  if (!c || !id) return null;
+  return c.messages.find(m => m.id === id) || null;
+}
+
+function editUserMsg(m) {
+  const c = curConv();
+  const i = c.messages.indexOf(m);
+  const text = m.content || '';
+  c.messages.splice(i);
+  saveNow(); Chat.renderAll();
+  const inp = $('#input');
+  inp.value = text; inp.focus();
+  inp.style.height = 'auto';
+  inp.style.height = Math.min(150, inp.scrollHeight) + 'px';
+  Chat.updateSendBtn();
+}
+
+/* ---------- voice ---------- */
+function bindVoice() {
+  let media = null, ctx = null, proc = null, srcNode = null, chunks = [], t0 = 0, cancel = false, timer = 0, active = false;
+  const wave = $('#wave');
+  const overlay = $('#voiceOverlay');
+
+  function paintWave() {
+    if (!wave.children.length) {
+      let html = '';
+      for (let i = 0; i < 44; i++) html += '<i></i>';
+      wave.innerHTML = html;
+    }
+    Array.from(wave.children).forEach(el => {
+      const hgt = 6 + Math.random() * 38;
+      el.style.height = hgt + 'px';
+    });
+  }
+
+  async function start() {
+    if (Chat.isStreaming()) return;
+    if (active) return;
+    active = true; cancel = false; chunks = []; t0 = Date.now();
+    overlay.hidden = false;
+    $('#voiceTip').textContent = '松手发送，上滑取消';
+    $('#voiceTip').classList.remove('cancel');
+    $('#voiceHold').classList.remove('cancel');
+    paintWave();
+    timer = setInterval(paintWave, 110);
+    try {
+      media = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true } });
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      srcNode = ctx.createMediaStreamSource(media);
+      proc = ctx.createScriptProcessor(4096, 1, 1);
+      proc.onaudioprocess = (ev) => {
+        if (!active) return;
+        chunks.push(new Float32Array(ev.inputBuffer.getChannelData(0)));
+      };
+      srcNode.connect(proc);
+      proc.connect(ctx.destination);
+    } catch (e) {
+      cleanup();
+      toast('无法使用麦克风：' + (e.message || '请检查权限'));
+    }
+  }
+
+  async function stop(doCancel) {
+    if (!active) return;
+    active = false;
+    overlay.hidden = true;
+    clearInterval(timer);
+    const dur = Date.now() - t0;
+    const rate = ctx ? ctx.sampleRate : 48000;
+    const list = chunks.slice();
+    cleanup();
+    if (doCancel || cancel || dur < 350 || !list.length) return;
+    try {
+      const wav = encodeWav(list, rate);
+      toast('正在识别…');
+      const text = await API.asr(wav);
+      if (!text) return toast('没有听清，再说一次');
+      const inp = $('#input');
+      inp.value = (inp.value ? inp.value + ' ' : '') + text;
+      inp.dispatchEvent(new Event('input'));
+      inp.focus();
+    } catch (e) { toast(e.message || '识别失败'); }
+  }
+
+  function cleanup() {
+    try { if (proc) { proc.disconnect(); proc.onaudioprocess = null; } } catch (e) { }
+    try { if (srcNode) srcNode.disconnect(); } catch (e) { }
+    try { if (media) media.getTracks().forEach(t => t.stop()); } catch (e) { }
+    try { if (ctx && ctx.state !== 'closed') ctx.close(); } catch (e) { }
+    proc = null; srcNode = null; media = null; ctx = null; active = false;
+  }
+
+  function encodeWav(floatChunks, rate) {
+    let total = 0;
+    floatChunks.forEach(c => total += c.length);
+    const buf = new ArrayBuffer(44 + total * 2);
+    const v = new DataView(buf);
+    const ws = (o, s) => { for (let i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i)); };
+    ws(0, 'RIFF'); v.setUint32(4, 36 + total * 2, true); ws(8, 'WAVE');
+    ws(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+    v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+    ws(36, 'data'); v.setUint32(40, total * 2, true);
+    let off = 44;
+    for (let ci = 0; ci < floatChunks.length; ci++) {
+      const c = floatChunks[ci];
+      for (let i = 0; i < c.length; i++) {
+        let s = Math.max(-1, Math.min(1, c[i]));
+        v.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7FFF, true);
+        off += 2;
+      }
+    }
+    return new Blob([buf], { type: 'audio/wav' });
+  }
+
+  const over = overlay;
+  function onDown(e) {
+    e.preventDefault();
+    start();
+  }
+  function onMove(e) {
+    if (!active) return;
+    const y = e.touches ? e.touches[0].clientY : e.clientY;
+    const dy = y - t0Y;
+    if (dy < -60 && !cancel) {
+      cancel = true;
+      $('#voiceTip').textContent = '松开取消';
+      $('#voiceTip').classList.add('cancel');
+      $('#voiceHold').classList.add('cancel');
+    } else if (dy > -40 && cancel) {
+      cancel = false;
+      $('#voiceTip').textContent = '松手发送，上滑取消';
+      $('#voiceTip').classList.remove('cancel');
+      $('#voiceHold').classList.remove('cancel');
+    }
+  }
+  let t0Y = 0;
+  function onUp() { if (active) stop(cancel); }
+
+  const mic = $('#btnMic');
+  mic.addEventListener('pointerdown', (e) => { t0Y = e.clientY; onDown(e); mic.setPointerCapture && mic.setPointerCapture(e.pointerId); });
+  mic.addEventListener('pointermove', onMove);
+  mic.addEventListener('pointerup', onUp);
+  mic.addEventListener('pointercancel', onUp);
+  mic.addEventListener('contextmenu', e => e.preventDefault());
+
+  const hold = $('#voiceHold');
+  hold.addEventListener('pointerdown', (e) => { t0Y = e.clientY; e.preventDefault(); });
+  hold.addEventListener('pointerup', onUp);
+  over.addEventListener('pointermove', onMove);
+  over.addEventListener('pointerup', onUp);
+  over.addEventListener('pointercancel', onUp);
+}
+
+/* ---------- misc ---------- */
+function bindMisc() {
+  // keyboard height / visual viewport fix
+  if (window.visualViewport) {
+    const vv = window.visualViewport;
+    const app = document.getElementById('app');
+    const sync = () => {
+      const shrunk = vv.height < window.innerHeight - 80;
+      if (shrunk) {
+        app.style.height = vv.height + 'px';
+        app.style.transform = 'translateY(' + (vv.offsetTop || 0) + 'px)';
+        setTimeout(() => { const sc = document.querySelector('#scroll'); if (sc) sc.scrollTop = sc.scrollHeight; }, 80);
+      } else {
+        app.style.height = '';
+        app.style.transform = '';
+      }
+    };
+    vv.addEventListener('resize', sync);
+    vv.addEventListener('scroll', sync);
+  }
+  // no system text selection / callout outside inputs
+  const editable = (t) => !!(t && t.closest && t.closest('input,textarea,[contenteditable="true"]'));
+  document.addEventListener('selectstart', (e) => { if (!editable(e.target)) e.preventDefault(); });
+  document.addEventListener('contextmenu', (e) => {
+    if (editable(e.target)) return;
+    e.preventDefault();
+  });
+  document.addEventListener('dragstart', (e) => {
+    if (!editable(e.target)) e.preventDefault();
+  });
+
+  // prevent double tap zoom
+  let lastTouch = 0;
+  document.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTouch < 300) e.preventDefault();
+    lastTouch = now;
+  }, { passive: false });
+
+  // paste image
+  document.addEventListener('paste', (e) => {
+    const dt = e.clipboardData; if (!dt || !dt.items) return;
+    for (const it of dt.items) {
+      if (it.type && it.type.indexOf('image/') === 0) {
+        const f = it.getAsFile();
+        if (f) { e.preventDefault(); Nav.handlePick(f); return; }
+      }
+    }
+  });
+
+  // drag & drop
+  const app = $('#app');
+  ['dragenter', 'dragover'].forEach(ev => app.addEventListener(ev, (e) => {
+    if (!e.dataTransfer || Array.from(e.dataTransfer.types || []).indexOf('Files') < 0) return;
+    e.preventDefault(); app.classList.add('dragging');
+  }));
+  ['dragleave', 'drop'].forEach(ev => app.addEventListener(ev, (e) => {
+    if (ev === 'dragleave' && e.relatedTarget && app.contains(e.relatedTarget)) return;
+    e.preventDefault(); app.classList.remove('dragging');
+  }));
+  app.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const files = e.dataTransfer && e.dataTransfer.files;
+    if (files && files.length) Nav.handlePick(files[0]);
+  });
+
+  // edge swipe (touch gestures, preventDefault to stop browser back-swipe)
+  let edge = null;
+  const SW_START = 32, SW_FIRE = 58, SW_ABORT = 48;
+
+  document.addEventListener('touchstart', (e) => {
+    edge = null;
+    if (e.touches.length !== 1) return;
+    const t = e.touches[0];
+    if (e.target.closest && e.target.closest('input,textarea,.sheet-root,#sidebar,.composer,.voice-overlay')) return;
+    if (t.clientX <= SW_START) edge = { x: t.clientX, y: t.clientY, fired: false };
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!edge || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    const dx = t.clientX - edge.x;
+    const dy = Math.abs(t.clientY - edge.y);
+    if (dy > SW_ABORT && dy > Math.abs(dx)) { edge = null; return; }
+    if (dx <= 0) { if (Math.abs(dx) > 24) edge = null; return; }
+    // horizontal rightward drag from the left edge: keep it in the app
+    if (e.cancelable) e.preventDefault();
+    if (!edge.fired && dx > SW_FIRE) { edge.fired = true; openSidebar(); }
+  }, { passive: false });
+
+  document.addEventListener('touchend', () => { edge = null; }, { passive: true });
+  document.addEventListener('touchcancel', () => { edge = null; }, { passive: true });
+
+  // swipe left inside the sidebar to close it (and swallow the gesture)
+  let edgeSb = null;
+  $('#sidebar').addEventListener('touchstart', (e) => {
+    edgeSb = e.touches.length === 1 ? { x: e.touches[0].clientX, y: e.touches[0].clientY, fired: false } : null;
+  }, { passive: true });
+  $('#sidebar').addEventListener('touchmove', (e) => {
+    if (!edgeSb || e.touches.length !== 1) return;
+    const t = e.touches[0];
+    const dx = t.clientX - edgeSb.x;
+    const dy = Math.abs(t.clientY - edgeSb.y);
+    if (dy > SW_ABORT && dy > Math.abs(dx)) { edgeSb = null; return; }
+    if (dx >= 0) { if (dx > 24) edgeSb = null; return; }
+    if (e.cancelable) e.preventDefault();
+    if (!edgeSb.fired && dx < -SW_FIRE) { edgeSb.fired = true; closeSidebar(); }
+  }, { passive: false });
+  $('#sidebar').addEventListener('touchend', () => { edgeSb = null; }, { passive: true });
+
+  // network status
+  window.addEventListener('offline', () => toast('网络已断开，恢复后会自动重试'));
+  window.addEventListener('online', () => toast('网络已恢复'));
+
+  // esc closes overlays
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    Nav.closeAll();
+    closeSidebar();
+  });
+
+  // KaTeX progressive enhancement (optional, network)
+  if (window.renderMathInElement) {
+    const obs = new MutationObserver(() => {
+      if (!window.renderMathInElement) return;
+      const ans = document.querySelectorAll('.answer:not(.mathdone)');
+      ans.forEach(a => {
+        try { window.renderMathInElement(a, { delimiters: [{ left: '$$', right: '$$', display: true }, { left: '$', right: '$', display: false }], throwOnError: false }); } catch (e) { }
+        a.classList.add('mathdone');
+      });
+    });
+    obs.observe(document.querySelector('#messages'), { childList: true, subtree: true });
+  }
+}
+</script>
+</body>
+</html>
